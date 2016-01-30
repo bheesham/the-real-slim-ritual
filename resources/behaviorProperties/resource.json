@@ -33,24 +33,20 @@
       "parentBehavior": null,
       "properties": []
     },
-    "ScriptBehavior": {
-      "scriptId": "18",
+    "IntroBehavior": {
+      "scriptId": "33",
       "line": 0,
       "parentBehavior": null,
       "properties": []
     },
     "CameraBehavior": {
-      "scriptId": "30",
+      "scriptId": "38",
       "line": 0,
       "parentBehavior": null,
       "properties": [
         {
           "name": "position",
           "type": "Sup.Math.Vector3"
-        },
-        {
-          "name": "offset",
-          "type": "number"
         }
       ]
     }

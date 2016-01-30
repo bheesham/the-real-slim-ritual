@@ -1,18 +1,66 @@
 [
   {
-    "id": "0",
-    "name": "Scene",
-    "type": "scene"
+    "id": "34",
+    "name": "Intro",
+    "type": null,
+    "children": [
+      {
+        "id": "32",
+        "name": "Scene",
+        "type": "scene"
+      },
+      {
+        "id": "33",
+        "name": "Behavior",
+        "type": "script"
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "name": "Act 1",
+    "type": null,
+    "children": [
+      {
+        "id": "36",
+        "name": "Areas",
+        "type": null,
+        "children": [
+          {
+            "id": "37",
+            "name": "1",
+            "type": null,
+            "children": [
+              {
+                "id": "25",
+                "name": "Map",
+                "type": "tileMap"
+              },
+              {
+                "id": "0",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "38",
+                "name": "Camera Behavior",
+                "type": "script"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Game",
+    "type": "script"
   },
   {
     "id": "4",
     "name": "Tile Set",
     "type": "tileSet"
-  },
-  {
-    "id": "6",
-    "name": "Map",
-    "type": "tileMap"
   },
   {
     "id": "1",
@@ -28,40 +76,6 @@
         "id": "3",
         "name": "Behavior",
         "type": "script"
-      }
-    ]
-  },
-  {
-    "id": "7",
-    "name": "Forest's shizzzz",
-    "type": null,
-    "children": [
-      {
-        "id": "18",
-        "name": "Map Scripts",
-        "type": "script"
-      },
-      {
-        "id": "10",
-        "name": "Forest Tile Set",
-        "type": "tileSet"
-      },
-      {
-        "id": "13",
-        "name": "Level 1",
-        "type": null,
-        "children": [
-          {
-            "id": "8",
-            "name": "Scene Level 1",
-            "type": "scene"
-          },
-          {
-            "id": "9",
-            "name": "Map 1",
-            "type": "tileMap"
-          }
-        ]
       }
     ]
   },
@@ -86,46 +100,5 @@
         "type": "scene"
       }
     ]
-  },
-  {
-    "id": "28",
-    "name": "Camera",
-    "type": null,
-    "children": [
-      {
-        "id": "30",
-        "name": "Behavior",
-        "type": "script"
-      }
-    ]
-  },
-  {
-    "id": "20",
-    "name": "Bheesham",
-    "type": null,
-    "children": [
-      {
-        "id": "24",
-        "name": "Areas",
-        "type": null,
-        "children": [
-          {
-            "id": "25",
-            "name": "1",
-            "type": "tileMap"
-          },
-          {
-            "id": "26",
-            "name": "2",
-            "type": "tileMap"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "31",
-    "name": "Game",
-    "type": "script"
   }
 ]
