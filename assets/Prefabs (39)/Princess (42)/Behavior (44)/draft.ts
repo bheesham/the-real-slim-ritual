@@ -52,9 +52,12 @@ class PrincessBehavior extends Sup.Behavior {
   }
   handleSwitches()
   {
+    let switchDefaults
+    
     let switchDefaults = Sup.getActor("Switch").getChildren();
     for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
-    let 
+    let gateDefaults = Sup.getActor("Gate").getChildren();
+    for(let gateDefault of gateDefaults)this.gateBodies.push(gateDefault.arcadeBody2D);
     
     for(let switchn of this.switchBodies)
     {
