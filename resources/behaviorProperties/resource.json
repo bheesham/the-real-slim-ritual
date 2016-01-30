@@ -55,6 +55,21 @@
           "type": "Sup.Math.Vector3"
         }
       ]
+    },
+    "MovingPlatformBehavior": {
+      "scriptId": "45",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "a",
+          "type": "number"
+        },
+        {
+          "name": "b",
+          "type": "boolean"
+        }
+      ]
     }
   }
 }

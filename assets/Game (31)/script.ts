@@ -5,9 +5,5 @@ module Game {
   export function start() {
     Game.playerBehavior = Sup.getActor("Princess").getBehavior(PrincessBehavior);
     Game.cameraBehavior = Sup.getActor("Camera").getBehavior(CameraBehavior);
-    
-    
-    Sup.log("ASDASDASD");
-    Sup.log(Game.cameraBehavior);
   }
 }

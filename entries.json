@@ -45,6 +45,11 @@
                 "id": "38",
                 "name": "Camera Behavior",
                 "type": "script"
+              },
+              {
+                "id": "46",
+                "name": "Script",
+                "type": "script"
               }
             ]
           }
@@ -111,6 +116,11 @@
       {
         "id": "41",
         "name": "Script",
+        "type": "script"
+      },
+      {
+        "id": "45",
+        "name": "MovingPlatform",
         "type": "script"
       }
     ]
