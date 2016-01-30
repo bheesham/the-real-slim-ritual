@@ -54,6 +54,11 @@
         "id": "4",
         "name": "Tile Set",
         "type": "tileSet"
+      },
+      {
+        "id": "50",
+        "name": "Tiles",
+        "type": "tileSet"
       }
     ]
   },
@@ -115,7 +120,12 @@
       },
       {
         "id": "45",
-        "name": "MovingPlatform",
+        "name": "MovingPlatform_x",
+        "type": "script"
+      },
+      {
+        "id": "48",
+        "name": "MovingPlatform_y",
         "type": "script"
       }
     ]

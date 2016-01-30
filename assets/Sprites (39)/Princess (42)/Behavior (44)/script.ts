@@ -1,9 +1,9 @@
 Sup.ArcadePhysics2D.setGravity(0, -0.02);
 
 class PrincessBehavior extends Sup.Behavior {
-  speed = 0.03;
-  jumpSpeed = 0.45;
-  wallJumpSpeed = 15;
+  speed = 0.06;
+  jumpSpeed = 0.8;
+  wallJumpSpeed = 25;
   statue = null;
   position: Sup.Math.Vector3 = this.actor.getLocalPosition();
 

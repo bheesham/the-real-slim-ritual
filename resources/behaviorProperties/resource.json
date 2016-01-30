@@ -56,8 +56,23 @@
         }
       ]
     },
-    "MovingPlatformBehavior": {
+    "MovingPlatform_xBehavior": {
       "scriptId": "45",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "a",
+          "type": "number"
+        },
+        {
+          "name": "b",
+          "type": "boolean"
+        }
+      ]
+    },
+    "MovingPlatform_yBehavior": {
+      "scriptId": "48",
       "line": 0,
       "parentBehavior": null,
       "properties": [

@@ -10,8 +10,8 @@
           "type": "SpriteRenderer",
           "config": {
             "spriteAssetId": "43",
-            "animationId": "",
-            "horizontalFlip": false,
+            "animationId": "4",
+            "horizontalFlip": true,
             "verticalFlip": false,
             "castShadow": false,
             "receiveShadow": false,
@@ -36,8 +36,8 @@
           "config": {
             "type": "box",
             "movable": true,
-            "width": 1.5,
-            "height": 1.8,
+            "width": 5,
+            "height": 7.8,
             "offset": {
               "x": 0,
               "y": 0
@@ -50,8 +50,8 @@
         }
       ],
       "position": {
-        "x": -13.407758712768555,
-        "y": 6.960302352905273,
+        "x": 4,
+        "y": 104,
         "z": 0
       },
       "orientation": {
@@ -61,8 +61,8 @@
         "w": 1
       },
       "scale": {
-        "x": 0.3,
-        "y": 0.3,
+        "x": 1,
+        "y": 1,
         "z": 1
       },
       "visible": true,
@@ -183,7 +183,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "MovingPlatformBehavior",
+            "behaviorName": "MovingPlatform_xBehavior",
             "propertyValues": {}
           },
           "id": "3"

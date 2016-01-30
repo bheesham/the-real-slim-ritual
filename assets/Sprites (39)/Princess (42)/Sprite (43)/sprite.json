@@ -3,12 +3,12 @@
   "maps": [
     "map"
   ],
-  "filtering": "pixelated",
-  "wrapping": "clampToEdge",
+  "filtering": "smooth",
+  "wrapping": "repeat",
   "pixelsPerUnit": 32,
   "framesPerSecond": 10,
   "opacity": null,
-  "alphaTest": 0.1,
+  "alphaTest": 0.4,
   "frameOrder": "rows",
   "grid": {
     "width": 288,
