@@ -26,7 +26,7 @@
         }
       ],
       "position": {
-        "x": 0,
+        "x": -2.1505661010742188,
         "y": 0,
         "z": 10
       },
@@ -53,7 +53,7 @@
         {
           "type": "TileMapRenderer",
           "config": {
-            "tileMapAssetId": "6",
+            "tileMapAssetId": "25",
             "tileSetAssetId": null,
             "castShadow": false,
             "receiveShadow": false,
@@ -73,7 +73,7 @@
               "x": 0,
               "y": 0
             },
-            "tileMapAssetId": "6",
+            "tileMapAssetId": "25",
             "tileSetPropertyName": null,
             "layersIndex": "0"
           },
@@ -81,7 +81,7 @@
         }
       ],
       "position": {
-        "x": -20,
+        "x": -21.248714447021484,
         "y": -10,
         "z": 0
       },
@@ -150,7 +150,7 @@
       ],
       "position": {
         "x": -15.158016204833984,
-        "y": -3.9337120056152344,
+        "y": 1.9629992246627808,
         "z": 0
       },
       "orientation": {

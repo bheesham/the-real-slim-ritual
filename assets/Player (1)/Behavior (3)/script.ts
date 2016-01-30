@@ -3,8 +3,8 @@ Sup.ArcadePhysics2D.setGravity(0, -0.02);
 class PlayerBehavior extends Sup.Behavior {
   speed = 0.03;
   jumpSpeed = 0.45;
+  wallJumpSpeed = 15;
   statue = null;
-  canDoubleJump = true;
 
   update() {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
@@ -35,9 +35,11 @@ class PlayerBehavior extends Sup.Behavior {
     }
     
     if (Sup.Input.isKeyDown("SPACE")) {
+      Sup.log(this.actor.getLocalPosition());
       if (!this.statue) {
-        this.statue = Sup.appendScene("Statue/StatuePrefab");
-        this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
+        this.statue = Sup.appendScene("Statue/StatuePrefab")[0];
+        Sup.log(this.statue.arcadeBody2D);
+        //this.statue.arcadeBody2D.warpPostion(this.actor.getLocalPosition());
       }
     }
     
@@ -60,11 +62,11 @@ class PlayerBehavior extends Sup.Behavior {
       
       if (Sup.Input.wasKeyJustPressed("UP") && touchLeft) {
         velocity.y = this.jumpSpeed;
-        velocity.x = this.speed*15;
+        velocity.x = this.speed * this.wallJumpSpeed;
         this.actor.spriteRenderer.setAnimation("Jump");
       } else if (Sup.Input.wasKeyJustPressed("UP") && touchRight) {
         velocity.y = this.jumpSpeed;
-        velocity.x = -(this.speed*15);
+        velocity.x = -(this.speed * this.wallJumpSpeed);
         this.actor.spriteRenderer.setAnimation("Jump");
       }
     }

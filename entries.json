@@ -91,6 +91,19 @@
     "id": "20",
     "name": "Bheesham",
     "type": null,
-    "children": []
+    "children": [
+      {
+        "id": "24",
+        "name": "Areas",
+        "type": null,
+        "children": [
+          {
+            "id": "25",
+            "name": "1",
+            "type": "tileMap"
+          }
+        ]
+      }
+    ]
   }
 ]

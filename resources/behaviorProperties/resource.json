@@ -14,12 +14,12 @@
           "type": "number"
         },
         {
-          "name": "statue",
-          "type": "any"
+          "name": "wallJumpSpeed",
+          "type": "number"
         },
         {
-          "name": "canDoubleJump",
-          "type": "boolean"
+          "name": "statue",
+          "type": "any"
         }
       ]
     },
