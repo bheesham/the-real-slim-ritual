@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 20,
+            "orthographicScale": 45.1,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -26,9 +26,9 @@
         }
       ],
       "position": {
-        "x": 0,
-        "y": 0,
-        "z": 10
+        "x": 21,
+        "y": 5,
+        "z": 100
       },
       "orientation": {
         "x": 0,
@@ -81,7 +81,7 @@
         }
       ],
       "position": {
-        "x": -20,
+        "x": -16.72250747680664,
         "y": -10,
         "z": 0
       },
@@ -150,7 +150,7 @@
       ],
       "position": {
         "x": -15.158016204833984,
-        "y": 1.9629992246627808,
+        "y": 6.923174858093262,
         "z": 0
       },
       "orientation": {

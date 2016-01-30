@@ -101,6 +101,11 @@
             "id": "25",
             "name": "1",
             "type": "tileMap"
+          },
+          {
+            "id": "26",
+            "name": "2",
+            "type": "tileMap"
           }
         ]
       }
