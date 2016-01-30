@@ -45,11 +45,6 @@
                 "id": "38",
                 "name": "Camera Behavior",
                 "type": "script"
-              },
-              {
-                "id": "47",
-                "name": "blank",
-                "type": "sprite"
               }
             ]
           }

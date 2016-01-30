@@ -1,5 +1,5 @@
 {
-  "filtering": "pixelated",
+  "filtering": "smooth",
   "pixelsPerUnit": 32,
   "framesPerSecond": 10,
   "alphaTest": 0.1

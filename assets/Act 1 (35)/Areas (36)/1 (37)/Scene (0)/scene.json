@@ -181,26 +181,17 @@
           "id": "0"
         },
         {
-          "type": "SpriteRenderer",
+          "type": "Behavior",
           "config": {
-            "spriteAssetId": null,
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
+            "behaviorName": "MovingPlatformBehavior",
+            "propertyValues": {}
           },
-          "id": "1"
+          "id": "3"
         }
       ],
       "position": {
-        "x": 43.128875732421875,
-        "y": 6.2809624671936035,
+        "x": 31,
+        "y": 6.5,
         "z": 0
       },
       "orientation": {
