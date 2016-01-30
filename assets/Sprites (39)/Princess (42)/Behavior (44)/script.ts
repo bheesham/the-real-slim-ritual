@@ -6,6 +6,9 @@ class PrincessBehavior extends Sup.Behavior {
   wallJumpSpeed = 25;
   statue = null;
   position: Sup.Math.Vector3 = this.actor.getLocalPosition();
+  doubleJump = false;
+  airTime = 60;
+  framelag = false;
 
   awake() {
     Game.playerBehavior = this;
@@ -66,10 +69,18 @@ class PrincessBehavior extends Sup.Behavior {
     velocity.x /= 1.1;
     if (Math.abs(velocity.x) < 0.01){
       velocity.x = 0;
-    }
+    }//this.statue
+    //time in the air
     
-    if (Sup.Input.isKeyDown("SPACE")) {
-      if (!this.statue) {
+
+    //varible needed for double jump validation
+    if (Sup.Input.isKeyDown("SPACE") &&  !this.doubleJump) 
+    {
+      if(!this.statue)
+        {
+        //this.statue.destroy();  
+        this.doubleJump = true;
+        //add base
         this.statue = Sup.appendScene("Sprites/Statue/StatuePrefab")[0];
         this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
         
@@ -82,6 +93,7 @@ class PrincessBehavior extends Sup.Behavior {
     }
     
     if (touchBottom) {
+      this.doubleJump = false;
       if (Sup.Input.wasKeyJustPressed("UP")) {
         velocity.y = this.jumpSpeed;
         this.actor.spriteRenderer.setAnimation("Jump");

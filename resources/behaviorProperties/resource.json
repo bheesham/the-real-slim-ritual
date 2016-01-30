@@ -53,6 +53,18 @@
         {
           "name": "position",
           "type": "Sup.Math.Vector3"
+        },
+        {
+          "name": "doubleJump",
+          "type": "boolean"
+        },
+        {
+          "name": "airTime",
+          "type": "number"
+        },
+        {
+          "name": "framelag",
+          "type": "boolean"
         }
       ]
     },

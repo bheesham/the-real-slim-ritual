@@ -12,4 +12,5 @@ class StatueBehavior extends Sup.Behavior {
       this.actor.arcadeBody2D.setVelocity(velocity);
   }
 }
+
 Sup.registerBehavior(StatueBehavior);
