@@ -13,6 +13,11 @@
         "id": "33",
         "name": "Behavior",
         "type": "script"
+      },
+      {
+        "id": "56",
+        "name": "Platform",
+        "type": "sprite"
       }
     ]
   },
@@ -35,6 +40,11 @@
                 "id": "25",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "57",
+                "name": "MapBehavior",
+                "type": "script"
               },
               {
                 "id": "51",
@@ -69,7 +79,7 @@
   },
   {
     "id": "39",
-    "name": "Sprites",
+    "name": "Prefabs",
     "type": null,
     "children": [
       {
@@ -110,6 +120,50 @@
             "type": "script"
           }
         ]
+      },
+      {
+        "id": "53",
+        "name": "MovingPlatform_x",
+        "type": null,
+        "children": [
+          {
+            "id": "58",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "45",
+            "name": "MovingPlatform_x",
+            "type": "script"
+          },
+          {
+            "id": "60",
+            "name": "MovingPlatform_x_prefab",
+            "type": "scene"
+          }
+        ]
+      },
+      {
+        "id": "54",
+        "name": "MovingPlatform_y",
+        "type": null,
+        "children": [
+          {
+            "id": "59",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "48",
+            "name": "MovingPlatform_y",
+            "type": "script"
+          },
+          {
+            "id": "61",
+            "name": "MovingPlatform_y_prefab",
+            "type": "scene"
+          }
+        ]
       }
     ]
   },
@@ -121,16 +175,6 @@
       {
         "id": "41",
         "name": "Script",
-        "type": "script"
-      },
-      {
-        "id": "45",
-        "name": "MovingPlatform_x",
-        "type": "script"
-      },
-      {
-        "id": "48",
-        "name": "MovingPlatform_y",
         "type": "script"
       }
     ]

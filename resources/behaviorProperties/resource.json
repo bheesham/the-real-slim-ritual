@@ -101,6 +101,12 @@
           "type": "boolean"
         }
       ]
+    },
+    "MapBehavior": {
+      "scriptId": "57",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }
