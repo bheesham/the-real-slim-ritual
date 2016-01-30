@@ -1,7 +1,7 @@
 Sup.ArcadePhysics2D.setGravity(0, -0.02);
 
 class PlayerBehavior extends Sup.Behavior {
-  speed = 0.3;
+  speed = 0.03;
   jumpSpeed = 0.45;
   statue = null;
   canDoubleJump = true;
@@ -12,25 +12,26 @@ class PlayerBehavior extends Sup.Behavior {
     // If the player is on the ground and wants to jump,
     // we update the `.y` component accordingly
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
-    let touchSides = this.actor.arcadeBody2D.getTouches().right || this.actor.arcadeBody2D.getTouches().left;
+    let touchRight = this.actor.arcadeBody2D.getTouches().right;
+    let touchLeft = this.actor.arcadeBody2D.getTouches().left;
 
     // As explained above, we get the current velocity
     let velocity = this.actor.arcadeBody2D.getVelocity();
 
     // We override the `.x` component based on the player's input
     if (Sup.Input.isKeyDown("LEFT")) {
-      velocity.x = -this.speed;
+      velocity.x -= this.speed;
       // When going left, we flip the sprite
       this.actor.spriteRenderer.setHorizontalFlip(true);
     } else if (Sup.Input.isKeyDown("RIGHT")) {
-      velocity.x = this.speed;
+      velocity.x += this.speed;
       // When going right, we clear the flip
       this.actor.spriteRenderer.setHorizontalFlip(false);
-    } else {
-      velocity.x /= 1.05;
-      if (Math.abs(velocity.x) < 0.1){
-        velocity.x = 0;
-      }
+    }
+    
+    velocity.x /= 1.1;
+    if (Math.abs(velocity.x) < 0.01){
+      velocity.x = 0;
     }
     
     if (Sup.Input.isKeyDown("SPACE")) {
@@ -55,10 +56,16 @@ class PlayerBehavior extends Sup.Behavior {
         this.actor.spriteRenderer.setAnimation("Jump");
       } else {
         this.actor.spriteRenderer.setAnimation("Fall");
-        if (Sup.Input.wasKeyJustPressed("UP") && touchSides) {
-          velocity.y = this.jumpSpeed;
-          this.actor.spriteRenderer.setAnimation("Jump");
-        }
+      }
+      
+      if (Sup.Input.wasKeyJustPressed("UP") && touchLeft) {
+        velocity.y = this.jumpSpeed;
+        velocity.x = this.speed*15;
+        this.actor.spriteRenderer.setAnimation("Jump");
+      } else if (Sup.Input.wasKeyJustPressed("UP") && touchRight) {
+        velocity.y = this.jumpSpeed;
+        velocity.x = -(this.speed*15);
+        this.actor.spriteRenderer.setAnimation("Jump");
       }
     }
 
