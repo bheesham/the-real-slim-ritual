@@ -448,12 +448,12 @@
       "children": [
         {
           "id": "18",
-          "name": "Prefab",
+          "name": "1",
           "children": [],
           "components": [],
           "position": {
-            "x": 134.3393406867981,
-            "y": 134.08424305915833,
+            "x": 142.80494737625122,
+            "y": 133.7458794116974,
             "z": 0
           },
           "orientation": {
@@ -478,6 +478,102 @@
       "position": {
         "x": -6.412415027618408,
         "y": 3.0226447582244873,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "19",
+      "name": "Gate",
+      "children": [
+        {
+          "id": "20",
+          "name": "1",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": -51.35955047607422,
+            "y": 5.13616943359375,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "74"
+          }
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 172.06072998046875,
+        "y": 135.258544921875,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "21",
+      "name": "Background",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "spriteAssetId": null,
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 91.89949035644531,
+        "y": 69.24065399169922,
         "z": 0
       },
       "orientation": {

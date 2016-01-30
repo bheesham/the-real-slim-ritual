@@ -35,7 +35,7 @@
     },
     {
       "id": "2",
-      "name": "Wall Jump",
+      "name": "WallJump",
       "startFrameIndex": 18,
       "endFrameIndex": 18,
       "speed": 1
@@ -59,6 +59,13 @@
       "name": "Jump",
       "startFrameIndex": 19,
       "endFrameIndex": 19,
+      "speed": 1
+    },
+    {
+      "id": "6",
+      "name": "WallHug",
+      "startFrameIndex": 17,
+      "endFrameIndex": 17,
       "speed": 1
     }
   ],

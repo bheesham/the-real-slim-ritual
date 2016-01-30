@@ -47,13 +47,42 @@ class PrincessBehavior extends Sup.Behavior {
       for(let mapOrangeDefault of mapOrangeDefaults) this.mapDefaultBodies.push(mapOrangeDefault.arcadeBody2D);
     }
     
-    let platformDefaults = Sup.getActor("Platforms").getChildren();
-    for(let platformDefault of platformDefaults) this.platformsBodies.push(platformDefault.arcadeBody2D);
-    
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
+  }
+  handleSwitches()
+  {
     let switchDefaults = Sup.getActor("Switch").getChildren();
     for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
     
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
+    for(let switchn of this.switchBodies)
+    {
+      var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
+      var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
+      if(a&&b)
+        {
+          //Sup.log("DOWNAGE");
+        }
+    }
+  }
+
+
+  handleAfterCollisions(velocity) {
+    //returns whether we are touching the bottom of a special collision
+    
+    let touchingBottom = false;
+    
+    let platformDefaults = Sup.getActor("Platforms").getChildren();
+    for(let platformDefault of platformDefaults){
+      Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,[platformDefault.arcadeBody2D]);
+      let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
+       touchingBottom = touchingBottom || touchBottom;
+      
+      if (touchBottom){
+        this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(platformDefault.arcadeBody2D.getVelocity().x,platformDefault.arcadeBody2D.getVelocity().y,0));
+        velocity.y = 0;
+      }      
+    } 
+    return touchingBottom;
   }
 
     update() 
@@ -65,18 +94,6 @@ class PrincessBehavior extends Sup.Behavior {
     let touchRight = this.actor.arcadeBody2D.getTouches().right;
     let touchLeft = this.actor.arcadeBody2D.getTouches().left;
       
-    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.switchBodies);
-    
-     // touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
-      
-     // if(touchBottom)
-     //   {
-     //     Sup.log("LEVERAGE");
-     //   }
-    
-    // If the player is on the ground and wants to jump,
-    // we update the `.y` component accordingly
-    
 
     if (touchBottom){
       this.wallJumped = false;
@@ -130,6 +147,8 @@ class PrincessBehavior extends Sup.Behavior {
         }
       }
     }
+    this.handleSwitches();
+    touchBottom = touchBottom || this.handleAfterCollisions(velocity);
     
     if (touchBottom) {
       this.doubleJump = false;
@@ -170,7 +189,9 @@ class PrincessBehavior extends Sup.Behavior {
         this.wallJumped = true;
       }
     }
-
+    
+    
+    
     this.position = this.actor.getLocalPosition();
     this.updateCamera();
     

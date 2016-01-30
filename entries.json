@@ -74,6 +74,11 @@
         "id": "50",
         "name": "Tiles",
         "type": "tileSet"
+      },
+      {
+        "id": "71",
+        "name": "Full Tile Set",
+        "type": "tileSet"
       }
     ]
   },
@@ -178,6 +183,23 @@
           {
             "id": "66",
             "name": "Switch_Prefab",
+            "type": "scene"
+          }
+        ]
+      },
+      {
+        "id": "72",
+        "name": "Gate",
+        "type": null,
+        "children": [
+          {
+            "id": "73",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "74",
+            "name": "Gate_Prefab",
             "type": "scene"
           }
         ]
