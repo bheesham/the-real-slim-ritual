@@ -1,0 +1,35 @@
+{
+  "behaviors": {
+    "PlayerBehavior": {
+      "scriptId": "3",
+      "line": 2,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        },
+        {
+          "name": "hasStatue",
+          "type": "boolean"
+        }
+      ]
+    },
+    "StatueBehavior": {
+      "scriptId": "17",
+      "line": 2,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "ScriptBehavior": {
+      "scriptId": "18",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    }
+  }
+}

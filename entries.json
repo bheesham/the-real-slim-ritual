@@ -1,0 +1,91 @@
+[
+  {
+    "id": "0",
+    "name": "Scene",
+    "type": "scene"
+  },
+  {
+    "id": "4",
+    "name": "Tile Set",
+    "type": "tileSet"
+  },
+  {
+    "id": "6",
+    "name": "Map",
+    "type": "tileMap"
+  },
+  {
+    "id": "1",
+    "name": "Player",
+    "type": null,
+    "children": [
+      {
+        "id": "2",
+        "name": "Sprite",
+        "type": "sprite"
+      },
+      {
+        "id": "3",
+        "name": "Behavior",
+        "type": "script"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Forest's shizzzz",
+    "type": null,
+    "children": [
+      {
+        "id": "18",
+        "name": "Map Scripts",
+        "type": "script"
+      },
+      {
+        "id": "10",
+        "name": "Forest Tile Set",
+        "type": "tileSet"
+      },
+      {
+        "id": "13",
+        "name": "Level 1",
+        "type": null,
+        "children": [
+          {
+            "id": "8",
+            "name": "Scene Level 1",
+            "type": "scene"
+          },
+          {
+            "id": "9",
+            "name": "Map 1",
+            "type": "tileMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Base",
+    "type": null,
+    "children": []
+  },
+  {
+    "id": "14",
+    "name": "Statue",
+    "type": null,
+    "children": [
+      {
+        "id": "16",
+        "name": "Sprite",
+        "type": "sprite"
+      },
+      {
+        "id": "17",
+        "name": "Behavior",
+        "type": "script"
+      }
+    ]
+  }
+]
