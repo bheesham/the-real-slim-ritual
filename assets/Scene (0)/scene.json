@@ -2,35 +2,61 @@
   "formatVersion": 1,
   "nodes": [
     {
-      "id": "2",
-      "name": "Player",
-      "children": [
+      "id": "7",
+      "name": "Camera",
+      "children": [],
+      "components": [
         {
-          "id": "4",
-          "name": "Camera",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 24.372623443603516,
-            "y": -1.5448999404907227,
-            "z": 10
+          "type": "Camera",
+          "config": {
+            "mode": "orthographic",
+            "fov": 45,
+            "orthographicScale": 20,
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "depth": 0,
+            "nearClippingPlane": 0.1,
+            "farClippingPlane": 1000
           },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "CameraBehavior",
+            "propertyValues": {}
           },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
+          "id": "1"
         }
       ],
+      "position": {
+        "x": -16.44690704345703,
+        "y": 6.794578552246094,
+        "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "2",
+      "name": "Player",
+      "children": [],
       "components": [
         {
           "type": "SpriteRenderer",

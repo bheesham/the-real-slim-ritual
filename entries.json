@@ -88,6 +88,18 @@
     ]
   },
   {
+    "id": "28",
+    "name": "Camera",
+    "type": null,
+    "children": [
+      {
+        "id": "30",
+        "name": "Behavior",
+        "type": "script"
+      }
+    ]
+  },
+  {
     "id": "20",
     "name": "Bheesham",
     "type": null,

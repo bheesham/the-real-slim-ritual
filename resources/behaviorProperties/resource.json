@@ -34,6 +34,29 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "CameraBehavior": {
+      "scriptId": "29",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        },
+        {
+          "name": "wallJumpSpeed",
+          "type": "number"
+        },
+        {
+          "name": "statue",
+          "type": "any"
+        }
+      ]
     }
   }
 }

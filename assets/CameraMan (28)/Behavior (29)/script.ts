@@ -1,6 +1,4 @@
-Sup.ArcadePhysics2D.setGravity(0, -0.02);
-
-class PlayerBehavior extends Sup.Behavior {
+class CameraManBehavior extends Sup.Behavior {
   speed = 0.03;
   jumpSpeed = 0.45;
   wallJumpSpeed = 15;
@@ -85,5 +83,5 @@ class PlayerBehavior extends Sup.Behavior {
   }
 }
 
-Sup.registerBehavior(PlayerBehavior);
+Sup.registerBehavior(CameraManBehavior);
 Sup.loadScene("Scene");
