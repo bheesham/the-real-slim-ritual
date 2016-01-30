@@ -32,6 +32,7 @@ class PrincessBehavior extends Sup.Behavior {
     let mapDefaults = Sup.getActor("Map").getChildren();
     for(let mapDefault of mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
     let platformDefaults = Sup.getActor("Platforms").getChildren();
+    for
     //has to be it the main sprite to work
     //var list:Array<Sup.ArcadePhysics2D.Body> = Sup.ArcadePhysics2D.getAllBodies();
     /*

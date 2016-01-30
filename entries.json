@@ -37,6 +37,11 @@
                 "type": "tileMap"
               },
               {
+                "id": "51",
+                "name": "Map_Red",
+                "type": "tileMap"
+              },
+              {
                 "id": "0",
                 "name": "Scene",
                 "type": "scene"
@@ -133,6 +138,11 @@
   {
     "id": "31",
     "name": "Game",
+    "type": "script"
+  },
+  {
+    "id": "52",
+    "name": "Notes",
     "type": "script"
   }
 ]

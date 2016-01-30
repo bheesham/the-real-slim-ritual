@@ -14,7 +14,7 @@ class CameraBehavior extends Sup.Behavior {
     
     cameraManActor.setPosition(-16, -10, 10);
     cameraManActor.camera.setOrthographicMode(true);
-    cameraManActor.camera.setOrthographicScale(50);
+    cameraManActor.camera.setOrthographicScale(60);
     
     Game.start();
   }
