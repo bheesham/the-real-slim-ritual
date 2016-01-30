@@ -11,6 +11,14 @@ class PlayerBehavior extends Sup.Behavior {
     Game.playerBehavior = this;
   }
 
+  updateCamera() {
+  Game.cameraBehavior.cameraActor.setLocalPosition({
+      x: this.position.x,
+      y: this.position.y,
+      z: Game.cameraBehavior.cameraActor.getLocalPosition().z
+    });
+  }
+
   update() {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
     
@@ -80,6 +88,9 @@ class PlayerBehavior extends Sup.Behavior {
       }
     }
 
+    this.position = this.actor.getLocalPosition();
+    this.updateCamera();
+    
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
   }
