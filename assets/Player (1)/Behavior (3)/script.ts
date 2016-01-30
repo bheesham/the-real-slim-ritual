@@ -35,11 +35,15 @@ class PlayerBehavior extends Sup.Behavior {
     }
     
     if (Sup.Input.isKeyDown("SPACE")) {
-      Sup.log(this.actor.getLocalPosition());
       if (!this.statue) {
         this.statue = Sup.appendScene("Statue/StatuePrefab")[0];
-        Sup.log(this.statue.arcadeBody2D);
-        //this.statue.arcadeBody2D.warpPostion(this.actor.getLocalPosition());
+        this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
+        
+        if (!touchBottom){
+          this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(new Sup.Math.Vector3(0,this.actor.arcadeBody2D.getSize()['height'],0)));
+          velocity.y = this.jumpSpeed;
+          this.actor.spriteRenderer.setAnimation("Jump");
+        }
       }
     }
     
