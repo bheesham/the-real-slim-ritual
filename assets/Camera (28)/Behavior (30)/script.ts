@@ -1,5 +1,6 @@
 class CameraBehavior extends Sup.Behavior {
   position = this.actor.getLocalPosition();
+  offset = 0;
 
   awake() {
     Game.cameraBehavior = this;
@@ -15,4 +16,5 @@ class CameraBehavior extends Sup.Behavior {
     this.actor.setLocalPosition(this.position);
   }
 }
+
 Sup.registerBehavior(CameraBehavior);

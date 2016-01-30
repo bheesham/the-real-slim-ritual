@@ -20,6 +20,10 @@
         {
           "name": "statue",
           "type": "any"
+        },
+        {
+          "name": "position",
+          "type": "Sup.Math.Vector3"
         }
       ]
     },
@@ -36,25 +40,17 @@
       "properties": []
     },
     "CameraBehavior": {
-      "scriptId": "29",
+      "scriptId": "30",
       "line": 0,
       "parentBehavior": null,
       "properties": [
         {
-          "name": "speed",
-          "type": "number"
+          "name": "position",
+          "type": "Sup.Math.Vector3"
         },
         {
-          "name": "jumpSpeed",
+          "name": "offset",
           "type": "number"
-        },
-        {
-          "name": "wallJumpSpeed",
-          "type": "number"
-        },
-        {
-          "name": "statue",
-          "type": "any"
         }
       ]
     }

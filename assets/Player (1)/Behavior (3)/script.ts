@@ -5,9 +5,14 @@ class PlayerBehavior extends Sup.Behavior {
   jumpSpeed = 0.45;
   wallJumpSpeed = 15;
   statue = null;
+  position: Sup.Math.Vector3 = this.actor.getLocalPosition();
+
+  awake() {
+    Game.playerBehavior = this;
+  }
 
   updateCamera() {
-    let pos = this.actor.getLocalPosition();
+    this.position = this.actor.getLocalPosition();
   }
   
   update() {
