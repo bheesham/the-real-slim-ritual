@@ -42,9 +42,14 @@
                 "type": "tileMap"
               },
               {
-                "id": "57",
-                "name": "MapBehavior",
-                "type": "script"
+                "id": "63",
+                "name": "Map_Green",
+                "type": "tileMap"
+              },
+              {
+                "id": "64",
+                "name": "Map_Orange",
+                "type": "tileMap"
               },
               {
                 "id": "0",
@@ -159,6 +164,23 @@
             "type": "scene"
           }
         ]
+      },
+      {
+        "id": "62",
+        "name": "Switch",
+        "type": null,
+        "children": [
+          {
+            "id": "65",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "66",
+            "name": "Switch_Prefab",
+            "type": "scene"
+          }
+        ]
       }
     ]
   },
@@ -170,6 +192,21 @@
       {
         "id": "41",
         "name": "Script",
+        "type": "script"
+      },
+      {
+        "id": "67",
+        "name": "MapGreenBehavior",
+        "type": "script"
+      },
+      {
+        "id": "69",
+        "name": "MapOrangeBehavior",
+        "type": "script"
+      },
+      {
+        "id": "68",
+        "name": "DefyTheGravy",
         "type": "script"
       }
     ]

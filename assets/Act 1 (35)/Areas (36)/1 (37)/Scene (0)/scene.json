@@ -50,7 +50,7 @@
         }
       ],
       "position": {
-        "x": 124,
+        "x": 136,
         "y": 141,
         "z": 0
       },
@@ -140,14 +140,6 @@
                 "layersIndex": "0"
               },
               "id": "1"
-            },
-            {
-              "type": "Behavior",
-              "config": {
-                "behaviorName": "MapBehavior",
-                "propertyValues": {}
-              },
-              "id": "3"
             }
           ],
           "position": {
@@ -175,6 +167,184 @@
       "position": {
         "x": 112.65005493164062,
         "y": 82.26351928710938,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "14",
+      "name": "Map_Green",
+      "children": [
+        {
+          "id": "16",
+          "name": "Map_Green",
+          "children": [],
+          "components": [
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "63",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "63",
+                "tileSetPropertyName": null,
+                "layersIndex": "0"
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapGreenBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -77.56134033203125,
+            "y": -48.21429443359375,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 190.21139526367188,
+        "y": 130.47781372070312,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "15",
+      "name": "Map_Orange",
+      "children": [
+        {
+          "id": "17",
+          "name": "Map_Orange",
+          "children": [],
+          "components": [
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "64",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "64",
+                "tileSetPropertyName": null,
+                "layersIndex": "0"
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapOrangeBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -77.56134033203125,
+            "y": -48.21429443359375,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 190.21139526367188,
+        "y": 130.47781372070312,
         "z": 0
       },
       "orientation": {
@@ -255,6 +425,59 @@
       "position": {
         "x": 112.65005493164062,
         "y": 82.26351928710938,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "13",
+      "name": "Switch",
+      "children": [
+        {
+          "id": "18",
+          "name": "Prefab",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 134.3393406867981,
+            "y": 134.08424305915833,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "66"
+          }
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": -6.412415027618408,
+        "y": 3.0226447582244873,
         "z": 0
       },
       "orientation": {

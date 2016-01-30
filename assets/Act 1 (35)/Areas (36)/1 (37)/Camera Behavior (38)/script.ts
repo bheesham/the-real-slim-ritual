@@ -14,13 +14,15 @@ class CameraBehavior extends Sup.Behavior {
     
     cameraManActor.setPosition(-16, -10, 10);
     cameraManActor.camera.setOrthographicMode(true);
-    cameraManActor.camera.setOrthographicScale(60);
+    cameraManActor.camera.setOrthographicScale(70);
     
     Game.start();
   }
 
   update() {
     this.position = this.actor.getLocalPosition();
+    //if (this.position.x)
+    Game.currentMap = this.actor;
   }
 }
 

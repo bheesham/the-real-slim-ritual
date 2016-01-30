@@ -14,6 +14,7 @@ class PrincessBehavior extends Sup.Behavior {
   mapDefaultBodies: Sup.ArcadePhysics2D.Body[] = [];
   map_1_Bodies: Sup.ArcadePhysics2D.Body[] = [];
   platformsBodies: Sup.ArcadePhysics2D.Body[] = [];
+  switchBodies : Sup.ArcadePhysics2D.Body[] = [];
 
   awake() {
     Game.playerBehavior = this;
@@ -27,51 +28,55 @@ class PrincessBehavior extends Sup.Behavior {
     });
   }
 
-  passThroughWall() {
+  handleCollisions() {
+    this.mapDefaultBodies = [];
+    this.map_1_Bodies = [];
+    this.platformsBodies = [];
+    this.switchBodies = [];
     
     let mapDefaults = Sup.getActor("Map").getChildren();
     for(let mapDefault of mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
+    
+    if (Game.color == 1){
+      let mapGreenDefaults = Sup.getActor("Map_Green").getChildren();
+      for(let mapGreenDefault of mapGreenDefaults) this.mapDefaultBodies.push(mapGreenDefault.arcadeBody2D);
+    }
+    
+    if (Game.color == 2){
+      let mapOrangeDefaults = Sup.getActor("Map_Orange").getChildren();
+      for(let mapOrangeDefault of mapOrangeDefaults) this.mapDefaultBodies.push(mapOrangeDefault.arcadeBody2D);
+    }
+    
     let platformDefaults = Sup.getActor("Platforms").getChildren();
     for(let platformDefault of platformDefaults) this.platformsBodies.push(platformDefault.arcadeBody2D);
     
-    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
-    
-    
-    //has to be it the main sprite to work
-    //var list:Array<Sup.ArcadePhysics2D.Body> = Sup.ArcadePhysics2D.getAllBodies();
-    /*
-    //list of unique names to get rid of pysical bounds
-    var names:Array<string> = ["Gate"];
-    
-    //gets rid of the 2d ridgid body properties of anything in names
-    for(var i = 0; i < list.length; i++) {
-      Sup.log(list);
-        for(var j = 0; j < names.length;j++) {
-           if((list[i].actor['__inner'].name === names[j])) {
-              list.splice(i,1);
-              names.splice(j,1);
-            }
-          }
-      }
-    */
-    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, list);
-    
-     
-    
-    
-  }
-
-
-  update() {
-    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
-    this.passThroughWall();
+    let switchDefaults = Sup.getActor("Switch").getChildren();
+    for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
     
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
-    // If the player is on the ground and wants to jump,
-    // we update the `.y` component accordingly
+  }
+
+    update() 
+    {
+      
+    this.handleCollisions();
+      
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchRight = this.actor.arcadeBody2D.getTouches().right;
     let touchLeft = this.actor.arcadeBody2D.getTouches().left;
+      
+    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.switchBodies);
+    
+     // touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
+      
+     // if(touchBottom)
+     //   {
+     //     Sup.log("LEVERAGE");
+     //   }
+    
+    // If the player is on the ground and wants to jump,
+    // we update the `.y` component accordingly
+    
 
     if (touchBottom){
       this.wallJumped = false;
@@ -90,6 +95,15 @@ class PrincessBehavior extends Sup.Behavior {
       // When going right, we clear the flip
       this.actor.spriteRenderer.setHorizontalFlip(true);
     }
+      
+    if (Sup.Input.isKeyDown("1")){
+      Game.color = 0;
+    }else if (Sup.Input.isKeyDown("2")){
+      Game.color = 1;
+    }else if (Sup.Input.isKeyDown("3")){
+      Game.color = 2;
+    }
+      
     
     velocity.x /= 1.1;
     if (Math.abs(velocity.x) < 0.05){

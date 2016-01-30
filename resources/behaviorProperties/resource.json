@@ -126,11 +126,41 @@
         }
       ]
     },
-    "MapBehavior": {
-      "scriptId": "57",
+    "MapGreenBehavior": {
+      "scriptId": "67",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "fadeSpeed",
+          "type": "number"
+        },
+        {
+          "name": "opacity",
+          "type": "number"
+        }
+      ]
+    },
+    "DefyTheGravyBehavior": {
+      "scriptId": "68",
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "MapOrangeBehavior": {
+      "scriptId": "69",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "fadeSpeed",
+          "type": "number"
+        },
+        {
+          "name": "opacity",
+          "type": "number"
+        }
+      ]
     }
   }
 }
