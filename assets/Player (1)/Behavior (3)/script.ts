@@ -6,6 +6,14 @@ class PlayerBehavior extends Sup.Behavior {
   wallJumpSpeed = 15;
   statue = null;
 
+  updateCamera() {
+    let pos = this.actor.getLocalPosition();
+    let viewport = this.actor.camera.getViewport();
+    Sup.log(`x: ${pos.x}, y: ${pos.y}`);
+    this.actor.camera.setViewport(pos.x, pos.y,
+                                  viewport.width, viewport.height);
+  }
+  
   update() {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
     
@@ -77,6 +85,7 @@ class PlayerBehavior extends Sup.Behavior {
 
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
+    this.updateCamera();
   }
 }
 

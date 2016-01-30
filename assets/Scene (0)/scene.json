@@ -2,33 +2,83 @@
   "formatVersion": 1,
   "nodes": [
     {
-      "id": "0",
-      "name": "Camera",
-      "children": [],
+      "id": "2",
+      "name": "Player",
+      "children": [
+        {
+          "id": "4",
+          "name": "Camera",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 24.372623443603516,
+            "y": -1.5448999404907227,
+            "z": 10
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [
         {
-          "type": "Camera",
+          "type": "SpriteRenderer",
           "config": {
-            "mode": "orthographic",
-            "fov": 45,
-            "orthographicScale": 45.1,
-            "viewport": {
-              "x": 0,
-              "y": 0,
-              "width": 1,
-              "height": 1
-            },
-            "depth": 0,
-            "nearClippingPlane": 0.1,
-            "farClippingPlane": 1000
+            "spriteAssetId": "2",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
           },
           "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "PlayerBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
+        },
+        {
+          "type": "ArcadeBody2D",
+          "config": {
+            "type": "box",
+            "movable": true,
+            "width": 1.5,
+            "height": 1.8,
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "tileMapAssetId": null,
+            "tileSetPropertyName": null,
+            "layersIndex": null
+          },
+          "id": "2"
         }
       ],
       "position": {
-        "x": 21,
-        "y": 5,
-        "z": 100
+        "x": -16,
+        "y": 7,
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -83,74 +133,6 @@
       "position": {
         "x": -16.72250747680664,
         "y": -10,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "2",
-      "name": "Player",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "2",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "PlayerBehavior",
-            "propertyValues": {}
-          },
-          "id": "1"
-        },
-        {
-          "type": "ArcadeBody2D",
-          "config": {
-            "type": "box",
-            "movable": true,
-            "width": 1.5,
-            "height": 1.8,
-            "offset": {
-              "x": 0,
-              "y": 0
-            },
-            "tileMapAssetId": null,
-            "tileSetPropertyName": null,
-            "layersIndex": null
-          },
-          "id": "2"
-        }
-      ],
-      "position": {
-        "x": -15.158016204833984,
-        "y": 6.923174858093262,
         "z": 0
       },
       "orientation": {
