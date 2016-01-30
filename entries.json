@@ -47,9 +47,9 @@
                 "type": "script"
               },
               {
-                "id": "46",
-                "name": "Script",
-                "type": "script"
+                "id": "47",
+                "name": "blank",
+                "type": "sprite"
               }
             ]
           }
