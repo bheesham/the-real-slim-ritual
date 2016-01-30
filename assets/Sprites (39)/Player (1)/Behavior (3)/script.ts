@@ -1,5 +1,4 @@
 Sup.ArcadePhysics2D.setGravity(0, -0.02);
-
 class PlayerBehavior extends Sup.Behavior {
   speed = 0.03;
   jumpSpeed = 0.45;
@@ -12,16 +11,37 @@ class PlayerBehavior extends Sup.Behavior {
   }
 
   updateCamera() {
-  Game.cameraBehavior.cameraActor.setLocalPosition({
+    Game.cameraBehavior.cameraActor.setLocalPosition({
       x: this.position.x,
       y: this.position.y,
       z: Game.cameraBehavior.cameraActor.getLocalPosition().z
     });
   }
 
-  update() {
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
+  passThroughWall()
+  {
+    //has to be it the main sprite to work
+    var list:Array<Sup.ArcadePhysics2D.Body> = Sup.ArcadePhysics2D.getAllBodies();
     
+    //list of unique names to get rid of pysical bounds
+    var names:Array<string> = ["Gate"];
+    
+    //gets rid of the 2d ridgid body properties of anything in names
+    for(var i = 0; i < list.length; i++) {
+        for(var j = 0; j < names.length;j++) {
+           if((list[i].actor['__inner'].name === names[j])) {
+              list.splice(i,1);
+              names.splice(j,1);
+            }
+          }
+      }
+    
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, list);
+  }
+
+  update() {
+    //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
+    this.passThroughWall();
     // If the player is on the ground and wants to jump,
     // we update the `.y` component accordingly
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
@@ -49,7 +69,7 @@ class PlayerBehavior extends Sup.Behavior {
     
     if (Sup.Input.isKeyDown("SPACE")) {
       if (!this.statue) {
-        this.statue = Sup.appendScene("Statue/StatuePrefab")[0];
+        this.statue = Sup.appendScene("Sprites/Statue/StatuePrefab")[0];
         this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
         
         if (!touchBottom){

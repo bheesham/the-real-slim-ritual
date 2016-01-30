@@ -2,7 +2,7 @@
   "behaviors": {
     "PlayerBehavior": {
       "scriptId": "3",
-      "line": 2,
+      "line": 1,
       "parentBehavior": null,
       "properties": [
         {
@@ -44,6 +44,39 @@
       "line": 0,
       "parentBehavior": null,
       "properties": [
+        {
+          "name": "position",
+          "type": "Sup.Math.Vector3"
+        }
+      ]
+    },
+    "ScriptBehavior": {
+      "scriptId": "41",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "PrincessBehavior": {
+      "scriptId": "44",
+      "line": 2,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "jumpSpeed",
+          "type": "number"
+        },
+        {
+          "name": "wallJumpSpeed",
+          "type": "number"
+        },
+        {
+          "name": "statue",
+          "type": "any"
+        },
         {
           "name": "position",
           "type": "Sup.Math.Vector3"

@@ -1,5 +1,10 @@
 [
   {
+    "id": "31",
+    "name": "Game",
+    "type": "script"
+  },
+  {
     "id": "34",
     "name": "Intro",
     "type": null,
@@ -49,55 +54,86 @@
             ]
           }
         ]
+      },
+      {
+        "id": "4",
+        "name": "Tile Set",
+        "type": "tileSet"
       }
     ]
   },
   {
-    "id": "31",
-    "name": "Game",
-    "type": "script"
-  },
-  {
-    "id": "4",
-    "name": "Tile Set",
-    "type": "tileSet"
-  },
-  {
-    "id": "1",
-    "name": "Player",
+    "id": "39",
+    "name": "Sprites",
     "type": null,
     "children": [
       {
-        "id": "2",
-        "name": "Sprite",
-        "type": "sprite"
+        "id": "1",
+        "name": "Player",
+        "type": null,
+        "children": [
+          {
+            "id": "2",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "3",
+            "name": "Behavior",
+            "type": "script"
+          }
+        ]
       },
       {
-        "id": "3",
-        "name": "Behavior",
-        "type": "script"
+        "id": "14",
+        "name": "Statue",
+        "type": null,
+        "children": [
+          {
+            "id": "16",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "17",
+            "name": "Behavior",
+            "type": "script"
+          },
+          {
+            "id": "19",
+            "name": "StatuePrefab",
+            "type": "scene"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "name": "Princess",
+        "type": null,
+        "children": [
+          {
+            "id": "43",
+            "name": "Sprite",
+            "type": "sprite"
+          },
+          {
+            "id": "44",
+            "name": "Behavior",
+            "type": "script"
+          }
+        ]
       }
     ]
   },
   {
-    "id": "14",
-    "name": "Statue",
+    "id": "40",
+    "name": "Extra_Code",
     "type": null,
     "children": [
       {
-        "id": "16",
-        "name": "Sprite",
-        "type": "sprite"
-      },
-      {
-        "id": "17",
-        "name": "Behavior",
+        "id": "41",
+        "name": "Script",
         "type": "script"
-      },
-      {
-        "id": "19",
-        "name": "StatuePrefab",
-        "type": "scene"
       }
     ]
   }

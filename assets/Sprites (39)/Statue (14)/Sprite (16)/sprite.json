@@ -22,8 +22,8 @@
       "id": "0",
       "name": "Idle",
       "startFrameIndex": 0,
-      "endFrameIndex": 0,
-      "speed": 1
+      "endFrameIndex": 5,
+      "speed": 0
     }
   ],
   "mapSlots": {
