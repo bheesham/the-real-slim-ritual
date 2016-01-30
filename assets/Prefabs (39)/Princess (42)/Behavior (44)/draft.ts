@@ -61,7 +61,6 @@ class PrincessBehavior extends Sup.Behavior {
     
   }
 
-
   update() {
     //Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
     this.passThroughWall();

@@ -47,11 +47,6 @@
                 "type": "script"
               },
               {
-                "id": "51",
-                "name": "Map_Red",
-                "type": "tileMap"
-              },
-              {
                 "id": "0",
                 "name": "Scene",
                 "type": "scene"

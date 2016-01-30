@@ -1,6 +1,9 @@
 class MovingPlatform_xBehavior extends Sup.Behavior {
-  a = 0;
-  b = true;
+  locationInCycle = 0;
+  directionOfCycle=true;
+  distanceFromCenter = 512;
+  speed = 0.2;
+  gravity = 0.02;
 
   awake()  {
 
@@ -10,26 +13,26 @@ class MovingPlatform_xBehavior extends Sup.Behavior {
     let velocity = this.actor.arcadeBody2D.getVelocity();
     
     //travel distance
-    if(this.a > 128) {
-      this.b = false;
+    if(this.locationInCycle > this.distanceFromCenter) {
+      this.directionOfCycle = false;
     }
         
-    if (this.a <-128) {
-      this.b=true;
+    if(this.locationInCycle <-this.distanceFromCenter) {
+      this.directionOfCycle=true;
     }
     
     //increment
-    if (this.b) {
-        this.a++;
-        velocity.x = 0.1;
+    if(this.directionOfCycle) {
+        this.locationInCycle++;
+        velocity.x =  this.speed;
     } else {
         //decrement
-        this.a--;
-        velocity.x = -0.1;
+        this.locationInCycle--;
+        velocity.x = -this.speed;
     }
-    
+
     //against gravity
-    velocity.y = 0.02;
+    velocity.y = this.gravity;
     
     //set vector
     this.actor.arcadeBody2D.setVelocity(velocity);

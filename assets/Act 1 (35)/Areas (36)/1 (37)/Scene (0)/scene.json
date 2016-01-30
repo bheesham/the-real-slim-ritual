@@ -50,8 +50,8 @@
         }
       ],
       "position": {
-        "x": 96,
-        "y": 104,
+        "x": 124,
+        "y": 141,
         "z": 0
       },
       "orientation": {
@@ -137,7 +137,7 @@
                 },
                 "tileMapAssetId": "25",
                 "tileSetPropertyName": null,
-                "layersIndex": "2"
+                "layersIndex": "0"
               },
               "id": "1"
             },
@@ -151,63 +151,8 @@
             }
           ],
           "position": {
-            "x": -129.37255859375,
-            "y": -92.26351928710938,
-            "z": 0
-          },
-          "orientation": {
             "x": 0,
             "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        },
-        {
-          "id": "6",
-          "name": "Map_Red",
-          "children": [],
-          "components": [
-            {
-              "type": "TileMapRenderer",
-              "config": {
-                "tileMapAssetId": "25",
-                "tileSetAssetId": null,
-                "castShadow": false,
-                "receiveShadow": false,
-                "materialType": "basic",
-                "shaderAssetId": null
-              },
-              "id": "0"
-            },
-            {
-              "type": "ArcadeBody2D",
-              "config": {
-                "type": "tileMap",
-                "movable": true,
-                "width": 1,
-                "height": 1,
-                "offset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "tileMapAssetId": "51",
-                "tileSetPropertyName": null,
-                "layersIndex": "0"
-              },
-              "id": "1"
-            }
-          ],
-          "position": {
-            "x": -129.37255859375,
-            "y": -92.26351928710938,
             "z": 0
           },
           "orientation": {
@@ -257,8 +202,8 @@
           "children": [],
           "components": [],
           "position": {
-            "x": -34.27183532714844,
-            "y": 11.614700317382812,
+            "x": 46.14593505859375,
+            "y": 54.162384033203125,
             "z": 0
           },
           "orientation": {
@@ -284,8 +229,8 @@
           "children": [],
           "components": [],
           "position": {
-            "x": -31.602645874023438,
-            "y": 1.6742935180664062,
+            "x": 76.61933898925781,
+            "y": 54.0894775390625,
             "z": 0
           },
           "orientation": {

@@ -78,12 +78,24 @@
       "parentBehavior": null,
       "properties": [
         {
-          "name": "a",
+          "name": "locationInCycle",
           "type": "number"
         },
         {
-          "name": "b",
+          "name": "directionOfCycle",
           "type": "boolean"
+        },
+        {
+          "name": "distanceFromCenter",
+          "type": "number"
+        },
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "gravity",
+          "type": "number"
         }
       ]
     },
@@ -93,12 +105,24 @@
       "parentBehavior": null,
       "properties": [
         {
-          "name": "a",
+          "name": "locationInCycle",
           "type": "number"
         },
         {
-          "name": "b",
+          "name": "directionOfCycle",
           "type": "boolean"
+        },
+        {
+          "name": "distanceFromCenter",
+          "type": "number"
+        },
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "gravity",
+          "type": "number"
         }
       ]
     },
