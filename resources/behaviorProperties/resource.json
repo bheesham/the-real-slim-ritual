@@ -1,32 +1,5 @@
 {
   "behaviors": {
-    "PlayerBehavior": {
-      "scriptId": "3",
-      "line": 1,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "speed",
-          "type": "number"
-        },
-        {
-          "name": "jumpSpeed",
-          "type": "number"
-        },
-        {
-          "name": "wallJumpSpeed",
-          "type": "number"
-        },
-        {
-          "name": "statue",
-          "type": "any"
-        },
-        {
-          "name": "position",
-          "type": "Sup.Math.Vector3"
-        }
-      ]
-    },
     "StatueBehavior": {
       "scriptId": "17",
       "line": 2,

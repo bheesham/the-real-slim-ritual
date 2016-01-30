@@ -56,11 +56,11 @@ class PrincessBehavior extends Sup.Behavior {
     if (Sup.Input.isKeyDown("LEFT")) {
       velocity.x -= this.speed;
       // When going left, we flip the sprite
-      this.actor.spriteRenderer.setHorizontalFlip(true);
+      this.actor.spriteRenderer.setHorizontalFlip(false);
     } else if (Sup.Input.isKeyDown("RIGHT")) {
       velocity.x += this.speed;
       // When going right, we clear the flip
-      this.actor.spriteRenderer.setHorizontalFlip(false);
+      this.actor.spriteRenderer.setHorizontalFlip(true);
     }
     
     velocity.x /= 1.1;

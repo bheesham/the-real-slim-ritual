@@ -1,10 +1,5 @@
 [
   {
-    "id": "31",
-    "name": "Game",
-    "type": "script"
-  },
-  {
     "id": "34",
     "name": "Intro",
     "type": null,
@@ -68,23 +63,6 @@
     "type": null,
     "children": [
       {
-        "id": "1",
-        "name": "Player",
-        "type": null,
-        "children": [
-          {
-            "id": "2",
-            "name": "Sprite",
-            "type": "sprite"
-          },
-          {
-            "id": "3",
-            "name": "Behavior",
-            "type": "script"
-          }
-        ]
-      },
-      {
         "id": "14",
         "name": "Statue",
         "type": null,
@@ -136,5 +114,10 @@
         "type": "script"
       }
     ]
+  },
+  {
+    "id": "31",
+    "name": "Game",
+    "type": "script"
   }
 ]
