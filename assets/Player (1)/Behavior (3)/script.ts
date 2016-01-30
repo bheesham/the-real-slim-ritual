@@ -3,7 +3,8 @@ Sup.ArcadePhysics2D.setGravity(0, -0.02);
 class PlayerBehavior extends Sup.Behavior {
   speed = 0.3;
   jumpSpeed = 0.45;
-  hasStatue = false;
+  statue = null;
+  canDoubleJump = true;
 
   update() {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, Sup.ArcadePhysics2D.getAllBodies());
@@ -11,6 +12,7 @@ class PlayerBehavior extends Sup.Behavior {
     // If the player is on the ground and wants to jump,
     // we update the `.y` component accordingly
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
+    let touchSides = this.actor.arcadeBody2D.getTouches().right || this.actor.arcadeBody2D.getTouches().left;
 
     // As explained above, we get the current velocity
     let velocity = this.actor.arcadeBody2D.getVelocity();
@@ -25,13 +27,18 @@ class PlayerBehavior extends Sup.Behavior {
       // When going right, we clear the flip
       this.actor.spriteRenderer.setHorizontalFlip(false);
     } else {
-      velocity.x = 0;
+      velocity.x /= 1.05;
+      if (Math.abs(velocity.x) < 0.1){
+        velocity.x = 0;
+      }
     }
     
     if (Sup.Input.isKeyDown("SPACE")) {
-      Sup.Actor.
+      if (!this.statue) {
+        this.statue = Sup.appendScene("Statue/StatuePrefab");
+        this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
+      }
     }
-    
     
     if (touchBottom) {
       if (Sup.Input.wasKeyJustPressed("UP")) {
@@ -44,12 +51,20 @@ class PlayerBehavior extends Sup.Behavior {
       }
     } else {
       // Here, we should play either "Jump" or "Fall" depending on the vertical speed
-      if (velocity.y >= 0) this.actor.spriteRenderer.setAnimation("Jump");
-      else this.actor.spriteRenderer.setAnimation("Fall");
+      if (velocity.y >= 0) {
+        this.actor.spriteRenderer.setAnimation("Jump");
+      } else {
+        this.actor.spriteRenderer.setAnimation("Fall");
+        if (Sup.Input.wasKeyJustPressed("UP") && touchSides) {
+          velocity.y = this.jumpSpeed;
+          this.actor.spriteRenderer.setAnimation("Jump");
+        }
+      }
     }
 
     // Finally, we apply the velocity back to the ArcadePhysics body
     this.actor.arcadeBody2D.setVelocity(velocity);
   }
 }
+
 Sup.registerBehavior(PlayerBehavior);

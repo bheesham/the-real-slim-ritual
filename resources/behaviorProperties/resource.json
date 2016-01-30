@@ -14,7 +14,11 @@
           "type": "number"
         },
         {
-          "name": "hasStatue",
+          "name": "statue",
+          "type": "any"
+        },
+        {
+          "name": "canDoubleJump",
           "type": "boolean"
         }
       ]

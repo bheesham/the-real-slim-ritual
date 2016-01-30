@@ -150,75 +150,7 @@
       ],
       "position": {
         "x": -15.158016204833984,
-        "y": -5.064236164093018,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "4",
-      "name": "Statue",
-      "children": [],
-      "components": [
-        {
-          "type": "ArcadeBody2D",
-          "config": {
-            "type": "box",
-            "movable": true,
-            "width": 1.5,
-            "height": 1.8,
-            "offset": {
-              "x": 0,
-              "y": 0
-            },
-            "tileMapAssetId": null,
-            "tileSetPropertyName": null,
-            "layersIndex": null
-          },
-          "id": "0"
-        },
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "16",
-            "animationId": "0",
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": true,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "1"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "StatueBehavior",
-            "propertyValues": {}
-          },
-          "id": "2"
-        }
-      ],
-      "position": {
-        "x": -9.942000389099121,
-        "y": 15.106740951538086,
+        "y": -3.9337120056152344,
         "z": 0
       },
       "orientation": {
