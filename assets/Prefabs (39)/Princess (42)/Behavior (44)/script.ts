@@ -237,7 +237,7 @@ class PrincessBehavior extends Sup.Behavior {
     //varible needed for double jump validation
     if (Sup.Input.isKeyDown("SPACE")) 
     {
-      if(!Game.cloneExists)
+      if(!Game.cloneExists && Game.canClone)
         {  
         this.doubleJump = true;
         Game.cloneExists = true;

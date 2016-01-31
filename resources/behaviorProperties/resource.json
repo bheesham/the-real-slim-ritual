@@ -181,6 +181,12 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "PentagramItemBehavior": {
+      "scriptId": "184",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

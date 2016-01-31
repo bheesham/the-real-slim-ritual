@@ -539,6 +539,28 @@
             "type": "script"
           }
         ]
+      },
+      {
+        "id": "180",
+        "name": "Pentagram",
+        "type": null,
+        "children": [
+          {
+            "id": "181",
+            "name": "Pentagram",
+            "type": "sprite"
+          },
+          {
+            "id": "183",
+            "name": "Prefab",
+            "type": "scene"
+          },
+          {
+            "id": "184",
+            "name": "Behavior",
+            "type": "script"
+          }
+        ]
       }
     ]
   },

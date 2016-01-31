@@ -1,4 +1,4 @@
-class PurpleBallItemBehavior extends Sup.Behavior {
+class PentagramItemBehavior extends Sup.Behavior {
   princess: Sup.Actor;
   awake() {
     this.princess = Sup.getActor("Princess");
@@ -14,10 +14,10 @@ class PurpleBallItemBehavior extends Sup.Behavior {
       return;
     }
     
-    Game.controlGreen = true;
-    this.actor.spriteRenderer.setAnimation("Death");
+    Game.controlOrange = true;
+    this.actor.spriteRenderer.setOpacity(0);
     this.actor.destroy();
   }
 }
 
-Sup.registerBehavior(PurpleBallItemBehavior);
+Sup.registerBehavior(PentagramItemBehavior);

@@ -373,7 +373,7 @@
               "type": "ArcadeBody2D",
               "config": {
                 "type": "box",
-                "movable": true,
+                "movable": false,
                 "width": 2,
                 "height": 15,
                 "offset": {

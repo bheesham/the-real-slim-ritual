@@ -3,14 +3,14 @@
   "nodes": [
     {
       "id": "0",
-      "name": "PurpleBall",
+      "name": "Pentagram",
       "children": [],
       "components": [
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "140",
-            "animationId": "0",
+            "spriteAssetId": "181",
+            "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,
@@ -22,22 +22,6 @@
             "shaderAssetId": null
           },
           "id": "0"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "DefyTheGravyBehavior",
-            "propertyValues": {}
-          },
-          "id": "1"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "PurpleBallItemBehavior",
-            "propertyValues": {}
-          },
-          "id": "2"
         },
         {
           "type": "ArcadeBody2D",
@@ -54,6 +38,22 @@
             "tileSetPropertyName": null,
             "layersIndex": null
           },
+          "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "DefyTheGravyBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "RedBallItemBehavior",
+            "propertyValues": {}
+          },
           "id": "3"
         }
       ],
@@ -69,7 +69,7 @@
         "w": 1
       },
       "scale": {
-        "x": 10,
+        "x": 8,
         "y": 10,
         "z": 1
       },

@@ -4,6 +4,7 @@ module Game {
   export let playerBehavior: PrincessBehavior;
   export let currentMap: Sup.Actor;
   
+  export let canClone = false;
   export let cloneExists = false;
         
   export let currentLevel = 0;
@@ -18,6 +19,7 @@ module Game {
   }
   
   export function loadLevel(level: number) {
+    this.canClone = false;
     this.currentLevel = level;
     this.cloneExists = false;
     Sup.loadScene(`Act 1/Areas/${level}/Scene`);

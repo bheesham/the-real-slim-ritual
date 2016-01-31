@@ -19,4 +19,5 @@ class RedBallItemBehavior extends Sup.Behavior {
     this.actor.destroy();
   }
 }
+
 Sup.registerBehavior(RedBallItemBehavior);
