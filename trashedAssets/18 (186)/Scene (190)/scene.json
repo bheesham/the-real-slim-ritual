@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "189",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "189",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -257,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 1.6088075637817383,
-        "y": 31.732593536376953,
+        "x": 5.7502570152282715,
+        "y": 22.878725051879883,
         "z": 0
       },
       "orientation": {
@@ -306,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 81.51199340820312,
-            "y": -1.4274253845214844,
+            "x": 78.62283325195312,
+            "y": -19.218911170959473,
             "z": 0
           },
           "orientation": {
@@ -330,145 +330,6 @@
       "position": {
         "x": 127.990234375,
         "y": 33.69154739379883,
-        "z": 10
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "15",
-      "name": "ClonePowerup",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 57.666,
-        "y": 6.498,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": {
-        "sceneAssetId": "183"
-      }
-    },
-    {
-      "id": "16",
-      "name": "Keyboard",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "195",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": 54.18537902832031,
-        "y": 81.23223114013672,
-        "z": 5
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 4,
-        "y": 4,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "18",
-      "name": "Hazards",
-      "children": [
-        {
-          "id": "17",
-          "name": "Hazard",
-          "children": [],
-          "components": [
-            {
-              "type": "ArcadeBody2D",
-              "config": {
-                "type": "box",
-                "movable": false,
-                "width": 1,
-                "height": 17,
-                "offset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "tileMapAssetId": null,
-                "tileSetPropertyName": null,
-                "layersIndex": null
-              },
-              "id": "0"
-            }
-          ],
-          "position": {
-            "x": -18.636520862579346,
-            "y": -18.469032287597656,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        }
-      ],
-      "components": [],
-      "position": {
-        "x": 15.037667274475098,
-        "y": 52.42527389526367,
         "z": 10
       },
       "orientation": {

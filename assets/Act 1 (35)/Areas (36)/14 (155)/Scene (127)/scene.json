@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 120,
+            "orthographicScale": 121,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -26,8 +26,8 @@
         }
       ],
       "position": {
-        "x": 102.8,
-        "y": 59.8,
+        "x": 103,
+        "y": 60,
         "z": 10
       },
       "orientation": {
@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "134",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "134",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -257,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 1.6088075637817383,
-        "y": 31.732593536376953,
+        "x": 7,
+        "y": 24,
         "z": 0
       },
       "orientation": {
@@ -279,12 +279,12 @@
       }
     },
     {
-      "id": "13",
-      "name": "Portals",
+      "id": "14",
+      "name": "Hazards",
       "children": [
         {
-          "id": "14",
-          "name": "Portal1",
+          "id": "16",
+          "name": "Hazard",
           "children": [],
           "components": [
             {
@@ -292,8 +292,8 @@
               "config": {
                 "type": "box",
                 "movable": false,
-                "width": 3,
-                "height": 15,
+                "width": 5,
+                "height": 20,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -306,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 81.51199340820312,
-            "y": -1.4274253845214844,
+            "x": -37.92394334077835,
+            "y": -34.73792266845703,
             "z": 0
           },
           "orientation": {
@@ -328,8 +328,8 @@
       ],
       "components": [],
       "position": {
-        "x": 127.990234375,
-        "y": 33.69154739379883,
+        "x": 37.167293548583984,
+        "y": 56.43529510498047,
         "z": 10
       },
       "orientation": {
@@ -349,81 +349,11 @@
     },
     {
       "id": "15",
-      "name": "ClonePowerup",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 57.666,
-        "y": 6.498,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": {
-        "sceneAssetId": "183"
-      }
-    },
-    {
-      "id": "16",
-      "name": "Keyboard",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "195",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": 54.18537902832031,
-        "y": 81.23223114013672,
-        "z": 5
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 4,
-        "y": 4,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "18",
-      "name": "Hazards",
+      "name": "Portals",
       "children": [
         {
           "id": "17",
-          "name": "Hazard",
+          "name": "Portal",
           "children": [],
           "components": [
             {
@@ -431,8 +361,8 @@
               "config": {
                 "type": "box",
                 "movable": false,
-                "width": 1,
-                "height": 17,
+                "width": 3,
+                "height": 42,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -445,8 +375,8 @@
             }
           ],
           "position": {
-            "x": -18.636520862579346,
-            "y": -18.469032287597656,
+            "x": 167.1120491027832,
+            "y": 28.7769775390625,
             "z": 0
           },
           "orientation": {
@@ -467,8 +397,8 @@
       ],
       "components": [],
       "position": {
-        "x": 15.037667274475098,
-        "y": 52.42527389526367,
+        "x": 37.167293548583984,
+        "y": 56.43529510498047,
         "z": 10
       },
       "orientation": {

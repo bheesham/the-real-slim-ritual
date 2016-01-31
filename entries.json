@@ -327,40 +327,6 @@
             "type": null,
             "children": [
               {
-                "id": "170",
-                "name": "Scene",
-                "type": "scene"
-              },
-              {
-                "id": "171",
-                "name": "Map",
-                "type": "tileMap"
-              }
-            ]
-          },
-          {
-            "id": "156",
-            "name": "15",
-            "type": null,
-            "children": [
-              {
-                "id": "172",
-                "name": "Scene",
-                "type": "scene"
-              },
-              {
-                "id": "173",
-                "name": "Map",
-                "type": "tileMap"
-              }
-            ]
-          },
-          {
-            "id": "141",
-            "name": "16",
-            "type": null,
-            "children": [
-              {
                 "id": "127",
                 "name": "Scene",
                 "type": "scene"
@@ -373,35 +339,28 @@
             ]
           },
           {
-            "id": "185",
-            "name": "17",
+            "id": "213",
+            "name": "15",
             "type": null,
             "children": [
               {
-                "id": "187",
+                "id": "214",
                 "name": "Scene",
                 "type": "scene"
               },
               {
-                "id": "188",
+                "id": "215",
                 "name": "Map",
                 "type": "tileMap"
-              }
-            ]
-          },
-          {
-            "id": "186",
-            "name": "18",
-            "type": null,
-            "children": [
-              {
-                "id": "190",
-                "name": "Scene",
-                "type": "scene"
               },
               {
-                "id": "189",
-                "name": "Map",
+                "id": "216",
+                "name": "Red",
+                "type": "tileMap"
+              },
+              {
+                "id": "217",
+                "name": "Purple",
                 "type": "tileMap"
               }
             ]

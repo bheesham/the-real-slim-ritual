@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "215",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "128",
+                "tileMapAssetId": "215",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -85,9 +85,9 @@
             }
           ],
           "position": {
-            "x": -32.484710693359375,
-            "y": -76.04187774658203,
-            "z": -10
+            "x": -32.485,
+            "y": -76.04,
+            "z": 0
           },
           "orientation": {
             "x": 0,
@@ -107,9 +107,9 @@
       ],
       "components": [],
       "position": {
-        "x": 29.554340362548828,
-        "y": 74.46492767333984,
-        "z": 10
+        "x": 29.554,
+        "y": 74.465,
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -204,7 +204,71 @@
     {
       "id": "4",
       "name": "Map_Green",
-      "children": [],
+      "children": [
+        {
+          "id": "23",
+          "name": "Purple",
+          "children": [],
+          "components": [
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "217",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "217",
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapGreenBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -0.0006296634674072266,
+            "y": 0.0019481182098388672,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -229,11 +293,75 @@
     {
       "id": "5",
       "name": "Map_Orange",
-      "children": [],
+      "children": [
+        {
+          "id": "15",
+          "name": "Red",
+          "children": [],
+          "components": [
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "216",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "216",
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapOrangeBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -32.485,
+            "y": -76.04,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [],
       "position": {
-        "x": -2.9303700923919678,
-        "y": -1.5769526958465576,
+        "x": 29.554,
+        "y": 74.465,
         "z": 0
       },
       "orientation": {
@@ -257,8 +385,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 1.6088075637817383,
-        "y": 31.732593536376953,
+        "x": 190.78724670410156,
+        "y": 113.93714904785156,
         "z": 0
       },
       "orientation": {
@@ -293,7 +421,7 @@
                 "type": "box",
                 "movable": false,
                 "width": 3,
-                "height": 15,
+                "height": 11,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -306,8 +434,8 @@
             }
           ],
           "position": {
-            "x": 81.51199340820312,
-            "y": -1.4274253845214844,
+            "x": -129.2908172607422,
+            "y": -4.864686965942383,
             "z": 0
           },
           "orientation": {
@@ -348,77 +476,7 @@
       "prefab": null
     },
     {
-      "id": "15",
-      "name": "ClonePowerup",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 57.666,
-        "y": 6.498,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": {
-        "sceneAssetId": "183"
-      }
-    },
-    {
       "id": "16",
-      "name": "Keyboard",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "195",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": 54.18537902832031,
-        "y": 81.23223114013672,
-        "z": 5
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 4,
-        "y": 4,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "18",
       "name": "Hazards",
       "children": [
         {
@@ -431,8 +489,8 @@
               "config": {
                 "type": "box",
                 "movable": false,
-                "width": 1,
-                "height": 17,
+                "width": 184,
+                "height": 3,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -445,8 +503,51 @@
             }
           ],
           "position": {
-            "x": -18.636520862579346,
-            "y": -18.469032287597656,
+            "x": -28.571441650390625,
+            "y": -13.63480794429779,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "20",
+          "name": "SideHazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 3,
+                "height": 120,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 64.80659484863281,
+            "y": 45.93544006347656,
             "z": 0
           },
           "orientation": {
@@ -467,8 +568,8 @@
       ],
       "components": [],
       "position": {
-        "x": 15.037667274475098,
-        "y": 52.42527389526367,
+        "x": 139.43797302246094,
+        "y": 14.927982330322266,
         "z": 10
       },
       "orientation": {
@@ -480,6 +581,102 @@
       "scale": {
         "x": 1,
         "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "19",
+      "name": "RedBall",
+      "children": [
+        {
+          "id": "18",
+          "name": "RedBall",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 43.124,
+            "y": -2.744,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "175"
+          }
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 145.886,
+        "y": 32.249,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "21",
+      "name": "Keyboard",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "spriteAssetId": "196",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 133.57522583007812,
+        "y": 90.98451232910156,
+        "z": 5
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 4,
+        "y": 4,
         "z": 1
       },
       "visible": true,

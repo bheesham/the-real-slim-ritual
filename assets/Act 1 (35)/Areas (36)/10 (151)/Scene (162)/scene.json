@@ -457,6 +457,31 @@
           "visible": true,
           "layer": 0,
           "prefab": null
+        },
+        {
+          "id": "18",
+          "name": "Hazard",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 119.71492004394531,
+            "y": -0.7339763641357422,
+            "z": 10
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
         }
       ],
       "components": [],

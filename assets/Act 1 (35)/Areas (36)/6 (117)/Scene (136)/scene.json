@@ -313,8 +313,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 9,
-        "y": 27,
+        "x": 1.2855361700057983,
+        "y": 21.96529197692871,
         "z": 0
       },
       "orientation": {
@@ -406,7 +406,51 @@
     {
       "id": "15",
       "name": "Hazards",
-      "children": [],
+      "children": [
+        {
+          "id": "21",
+          "name": "Hazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 1,
+                "height": 200,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -75.76533341407776,
+            "y": 64.05510902404785,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [],
       "position": {
         "x": 72.90059661865234,
