@@ -229,7 +229,71 @@
     {
       "id": "5",
       "name": "Map_Orange",
-      "children": [],
+      "children": [
+        {
+          "id": "17",
+          "name": "Red",
+          "children": [],
+          "components": [
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "201",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "201",
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapOrangeBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": 16.025,
+            "y": -1.633,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -257,8 +321,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 5.7502570152282715,
-        "y": 22.878725051879883,
+        "x": 198.35044860839844,
+        "y": 13.217881202697754,
         "z": 0
       },
       "orientation": {
@@ -306,8 +370,8 @@
             }
           ],
           "position": {
-            "x": 78.62283325195312,
-            "y": -19.218911170959473,
+            "x": -129.1880429983139,
+            "y": -9.660829544067383,
             "z": 0
           },
           "orientation": {

@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "169",
+                "tileMapAssetId": "204",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "169",
+                "tileMapAssetId": "204",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -229,7 +229,71 @@
     {
       "id": "5",
       "name": "Map_Orange",
-      "children": [],
+      "children": [
+        {
+          "id": "15",
+          "name": "Map",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "tileMap",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": "205",
+                "tileSetPropertyName": null,
+                "layersIndex": "0"
+              },
+              "id": "0"
+            },
+            {
+              "type": "TileMapRenderer",
+              "config": {
+                "tileMapAssetId": "205",
+                "tileSetAssetId": null,
+                "castShadow": false,
+                "receiveShadow": false,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapOrangeBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": -2.384185791015625e-7,
+            "y": 0.0000026226043701171875,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -257,8 +321,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 5.7502570152282715,
-        "y": 22.878725051879883,
+        "x": 184.98971557617188,
+        "y": 111.57349395751953,
         "z": 0
       },
       "orientation": {
@@ -306,8 +370,8 @@
             }
           ],
           "position": {
-            "x": 78.62283325195312,
-            "y": -19.218911170959473,
+            "x": -127.13255327939987,
+            "y": -9.455291748046875,
             "z": 0
           },
           "orientation": {
@@ -330,6 +394,161 @@
       "position": {
         "x": 127.990234375,
         "y": 33.69154739379883,
+        "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "16",
+      "name": "Hazards",
+      "children": [
+        {
+          "id": "17",
+          "name": "Hazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 212,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -13.771812438964844,
+            "y": -65.25064945220947,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "18",
+          "name": "Hazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 1,
+                "height": 212,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 87.8725814819336,
+            "y": 39.47699737548828,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "19",
+          "name": "Hazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 1,
+                "height": 212,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -123.43269681930542,
+            "y": 16.147071838378906,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 119.90454864501953,
+        "y": 63.09624481201172,
         "z": 10
       },
       "orientation": {

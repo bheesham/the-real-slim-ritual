@@ -9,15 +9,18 @@ module Game {
         
   export let currentLevel = 0;
   
+  export let songIndex = 0;
+  export let songPlayer = null;
+        
   export let controlOrange = false;
   export let controlGreen = false;
   export let orangeEnabled = true;
   export let greenEnabled = true;
   
   export let doorInStage = true;
-        
+  
   export function start() {
-    Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
+    this.songPlayer = Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
   }
   
   export function loadLevel(level: number) {
@@ -54,5 +57,16 @@ module Game {
         that.destroy();
       }
     });
+  }
+  
+  export function nextSong(){
+    this.songIndex += 1;
+    if (this.songIndex == 1){
+      this.songPlayer.stop();
+      this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+    }if (this.songIndex == 2){
+      this.songPlayer.stop();
+      this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+    }
   }
 }

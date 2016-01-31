@@ -230,6 +230,11 @@
                 "id": "163",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "201",
+                "name": "Red",
+                "type": "tileMap"
               }
             ]
           },
@@ -256,18 +261,23 @@
             ]
           },
           {
-            "id": "153",
+            "id": "202",
             "name": "12",
             "type": null,
             "children": [
               {
-                "id": "166",
+                "id": "203",
                 "name": "Scene",
                 "type": "scene"
               },
               {
-                "id": "167",
+                "id": "204",
                 "name": "Map",
+                "type": "tileMap"
+              },
+              {
+                "id": "205",
+                "name": "Orange",
                 "type": "tileMap"
               }
             ]

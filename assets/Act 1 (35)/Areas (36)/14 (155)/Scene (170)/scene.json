@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "171",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "171",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,

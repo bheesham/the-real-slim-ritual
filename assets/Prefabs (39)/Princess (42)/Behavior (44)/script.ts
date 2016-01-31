@@ -33,6 +33,14 @@ class PrincessBehavior extends Sup.Behavior {
   awake() {
     Game.playerBehavior = this;
     this.mapDefaults = Sup.getActor("Map").getChildren();
+    
+    if (Game.controlGreen){
+      this.actor.spriteRenderer.setSprite("Prefabs/Princess/Princess Purple");
+    }else if (Game.controlOrange){
+      this.actor.spriteRenderer.setSprite("Prefabs/Princess/Princess Red");
+    }else{
+      this.actor.spriteRenderer.setSprite("Prefabs/Princess/Sprite");
+    }
   }
 
   handleCloneCollisions(){
