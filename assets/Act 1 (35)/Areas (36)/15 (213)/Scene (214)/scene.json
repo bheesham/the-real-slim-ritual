@@ -385,8 +385,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 190.78724670410156,
-        "y": 113.93714904785156,
+        "x": 7.334005355834961,
+        "y": 28.63395118713379,
         "z": 0
       },
       "orientation": {
@@ -590,35 +590,7 @@
     {
       "id": "19",
       "name": "RedBall",
-      "children": [
-        {
-          "id": "18",
-          "name": "RedBall",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 43.124,
-            "y": -2.744,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "175"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": 145.886,
@@ -648,7 +620,7 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "196",
+            "spriteAssetId": null,
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -677,6 +649,59 @@
       "scale": {
         "x": 4,
         "y": 4,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "24",
+      "name": "PurpleBall",
+      "children": [
+        {
+          "id": "25",
+          "name": "PurpleBall",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": -91.16133880615234,
+            "y": 6.372047424316406,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "174"
+          }
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 184.343,
+        "y": 35.195,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
         "z": 1
       },
       "visible": true,

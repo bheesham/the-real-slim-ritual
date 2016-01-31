@@ -218,7 +218,6 @@ class PrincessBehavior extends Sup.Behavior {
     // As explained above, we get the current velocity
     let velocity = this.actor.arcadeBody2D.getVelocity();
 
-      
     // We override the `.x` component based on the player's input
     if (Sup.Input.isKeyDown("LEFT")) {
       velocity.x -= this.speed;
