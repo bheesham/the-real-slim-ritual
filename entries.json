@@ -364,7 +364,18 @@
             "id": "220",
             "name": "16",
             "type": null,
-            "children": []
+            "children": [
+              {
+                "id": "227",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "226",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
           }
         ]
       },
