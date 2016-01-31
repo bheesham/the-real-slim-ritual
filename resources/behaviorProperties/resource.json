@@ -239,6 +239,12 @@
           "type": "number"
         }
       ]
+    },
+    "GoatHeadBehavior": {
+      "scriptId": "225",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

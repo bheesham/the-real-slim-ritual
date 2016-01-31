@@ -62,6 +62,11 @@
                 "id": "92",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "222",
+                "name": "Map (1)",
+                "type": "tileMap"
               }
             ]
           },
@@ -78,16 +83,6 @@
               {
                 "id": "122",
                 "name": "Map",
-                "type": "tileMap"
-              },
-              {
-                "id": "63",
-                "name": "Map_Green",
-                "type": "tileMap"
-              },
-              {
-                "id": "64",
-                "name": "Map_Orange",
                 "type": "tileMap"
               }
             ]
@@ -597,6 +592,11 @@
             "type": "sprite"
           },
           {
+            "id": "221",
+            "name": "Goat head",
+            "type": "sprite"
+          },
+          {
             "id": "183",
             "name": "Prefab",
             "type": "scene"
@@ -637,6 +637,18 @@
             "id": "199",
             "name": "Q Keyboard",
             "type": "sprite"
+          }
+        ]
+      },
+      {
+        "id": "223",
+        "name": "Goat Head",
+        "type": null,
+        "children": [
+          {
+            "id": "225",
+            "name": "Behavior",
+            "type": "script"
           }
         ]
       }

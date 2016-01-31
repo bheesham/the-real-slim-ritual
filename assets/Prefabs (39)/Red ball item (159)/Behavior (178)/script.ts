@@ -20,7 +20,7 @@ class RedBallItemBehavior extends Sup.Behavior {
     this.actor.spriteRenderer.setAnimation("Death");
     
     if (this.des) {
-      Game.nextSong();
+      Game.selectSong(1);
       Sup.Audio.playSound("Sound/PowerupSound");
       Game.destroyActor(this.actor, 1000);
       this.des = false;

@@ -20,7 +20,7 @@ module Game {
   export let doorInStage = true;
   
   export function start() {
-    this.songPlayer = Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
+    selectSong(0);
   }
   
   export function loadLevel(level: number) {
@@ -59,14 +59,26 @@ module Game {
     });
   }
   
-  export function nextSong(){
-    this.songIndex += 1;
-    if (this.songIndex == 1){
-      this.songPlayer.stop();
-      this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
-    }if (this.songIndex == 2){
-      this.songPlayer.stop();
-      this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+  export function selectSong(i){
+    if (this.songIndex != i){
+      this.songIndex = i;
+      if (this.songIndex == 0){
+        if (this.songPlayer){
+          this.songPlayer.stop();
+        }
+        this.songPlayer = Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
+      }
+      if (this.songIndex == 1){
+        if (this.songPlayer){
+          this.songPlayer.stop();
+        }
+        this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+      }if (this.songIndex == 2){
+        if (this.songPlayer){
+          this.songPlayer.stop();
+        }
+        this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+      }
     }
   }
 }
