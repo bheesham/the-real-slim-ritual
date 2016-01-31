@@ -26,7 +26,7 @@ class PrincessBehavior extends Sup.Behavior {
   cloneBody : Sup.ArcadePhysics2D.Body = null;
 
   onDestroy(){
-    this.runSoundPlayer.stop()
+    this.runSoundPlayer.stop();
   }
 
   awake() {
@@ -125,6 +125,18 @@ class PrincessBehavior extends Sup.Behavior {
       //define some varibles
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
+      if(a&&b)
+        {
+          Game.doorInStage = true;
+        }
+      else
+        {
+          Game.doorInStage = false;
+        }
+      if(this.gateBodies.length > 0 && !Game.doorInStage)
+        {
+          this.mapDefaultBodies.push(this.gateBodies[0]);
+        }
       //if bothare truw for x and y axis
       if(a&&b)
         {
@@ -147,6 +159,7 @@ class PrincessBehavior extends Sup.Behavior {
     {
       this.mapDefaultBodies.push(this.gateBodies[i]);
     }
+    
   }
 
   handleAfterCollisions(velocity) {
@@ -169,8 +182,7 @@ class PrincessBehavior extends Sup.Behavior {
     }
     return touchingBottom;
   }
-    initializeArrays()
-    {
+    initializeArrays() {
         this.switchBodies = [];
        this.gateBodies = [];
        this.mapDefaultBodies = [];
@@ -178,6 +190,8 @@ class PrincessBehavior extends Sup.Behavior {
        this.platformsBodies = [];
 
     }
+      
+      
     update() 
     {
     this.initializeArrays();

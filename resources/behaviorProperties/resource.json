@@ -174,13 +174,23 @@
       "scriptId": "178",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "des",
+          "type": "boolean"
+        }
+      ]
     },
     "PurpleBallItemBehavior": {
       "scriptId": "179",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "des",
+          "type": "boolean"
+        }
+      ]
     },
     "PentagramItemBehavior": {
       "scriptId": "184",

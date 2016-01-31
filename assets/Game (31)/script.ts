@@ -40,4 +40,10 @@ module Game {
     --this.currentLevel;
     this.loadLevel(this.currentLevel);
   }
+  
+  export function destroyActor(that: Sup.Actor, interval) {
+    Sup.setTimeout(interval, function() {
+      that.destroy();
+    });
+  }
 }

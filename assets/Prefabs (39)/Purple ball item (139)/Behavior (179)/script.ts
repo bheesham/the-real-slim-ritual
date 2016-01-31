@@ -1,5 +1,7 @@
 class PurpleBallItemBehavior extends Sup.Behavior {
   princess: Sup.Actor;
+  des: boolean = false;
+
   awake() {
     this.princess = Sup.getActor("Princess");
   }
@@ -14,9 +16,17 @@ class PurpleBallItemBehavior extends Sup.Behavior {
       return;
     }
     
+    this.des = true;
     Game.controlGreen = true;
     this.actor.spriteRenderer.setAnimation("Death");
-    this.actor.destroy();
+    
+    if (this.des) {
+      this.des = false;
+      let that = this;
+      Sup.setTimeout(1000, function() {
+        that.actor.destroy();
+      });
+    }  
   }
 }
 
