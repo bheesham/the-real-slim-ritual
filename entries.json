@@ -406,6 +406,16 @@
                 "id": "235",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "236",
+                "name": "Red",
+                "type": "tileMap"
+              },
+              {
+                "id": "237",
+                "name": "Purple",
+                "type": "tileMap"
               }
             ]
           }

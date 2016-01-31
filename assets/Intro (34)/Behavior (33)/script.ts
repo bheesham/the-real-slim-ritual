@@ -16,6 +16,7 @@ class IntroBehavior extends Sup.Behavior {
   loadCredits() {
     let that = this;
     Sup.setTimeout(10, function() {
+      Game.selectSong(1);
       that.startGame();
     });
   }
