@@ -465,11 +465,6 @@
         "id": "84",
         "name": "MusicPlayerBehavior",
         "type": "script"
-      },
-      {
-        "id": "43",
-        "name": "Sprite",
-        "type": "sprite"
       }
     ]
   }

@@ -7,14 +7,6 @@
       "children": [],
       "components": [
         {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "MovingPlatform_yBehavior",
-            "propertyValues": {}
-          },
-          "id": "0"
-        },
-        {
           "type": "SpriteRenderer",
           "config": {
             "spriteAssetId": "59",

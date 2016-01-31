@@ -142,7 +142,7 @@ class PrincessBehavior extends Sup.Behavior {
 
         if (touchBottom){
           this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(platformDefault.arcadeBody2D.getVelocity().x,platformDefault.arcadeBody2D.getVelocity().y,0));
-          velocity.y = 0;
+          velocity.y = -0.01;
         }      
       } 
     }

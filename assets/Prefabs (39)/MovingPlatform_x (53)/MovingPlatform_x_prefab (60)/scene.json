@@ -7,14 +7,6 @@
       "children": [],
       "components": [
         {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "MovingPlatform_xBehavior",
-            "propertyValues": {}
-          },
-          "id": "0"
-        },
-        {
           "type": "SpriteRenderer",
           "config": {
             "spriteAssetId": "58",
@@ -47,6 +39,14 @@
             "layersIndex": null
           },
           "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "",
+            "propertyValues": {}
+          },
+          "id": "5"
         }
       ],
       "position": {
