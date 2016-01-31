@@ -179,130 +179,7 @@
     {
       "id": "3",
       "name": "Platforms",
-      "children": [
-        {
-          "id": "13",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 123.4782292842865,
-            "y": 13.830188512802124,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "60"
-          }
-        },
-        {
-          "id": "14",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 164.96363425254822,
-            "y": 57.272791624069214,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "61"
-          }
-        },
-        {
-          "id": "22",
-          "name": "x_Motion",
-          "children": [],
-          "components": [
-            {
-              "type": "ArcadeBody2D",
-              "config": {
-                "type": "box",
-                "movable": true,
-                "width": 1,
-                "height": 1,
-                "offset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "tileMapAssetId": null,
-                "tileSetPropertyName": null,
-                "layersIndex": null
-              },
-              "id": "0"
-            },
-            {
-              "type": "Behavior",
-              "config": {
-                "behaviorName": "DefyTheGravyBehavior",
-                "propertyValues": {}
-              },
-              "id": "1"
-            },
-            {
-              "type": "SpriteRenderer",
-              "config": {
-                "spriteAssetId": "58",
-                "animationId": null,
-                "horizontalFlip": false,
-                "verticalFlip": false,
-                "castShadow": false,
-                "receiveShadow": false,
-                "color": "ffffff",
-                "overrideOpacity": false,
-                "opacity": null,
-                "materialType": "basic",
-                "shaderAssetId": null
-              },
-              "id": "2"
-            }
-          ],
-          "position": {
-            "x": 136.3270833492279,
-            "y": 36.463236570358276,
-            "z": 10
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 11,
-            "y": 0.2,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -380,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 7.49743127822876,
-        "y": 19.69270896911621,
+        "x": 2.0503604412078857,
+        "y": 53.916751861572266,
         "z": 0
       },
       "orientation": {
@@ -415,8 +292,8 @@
               "config": {
                 "type": "box",
                 "movable": true,
-                "width": 2,
-                "height": 15,
+                "width": 12,
+                "height": 5,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -429,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 141.83396911621094,
-            "y": 104.52260494232178,
+            "x": 39.98402404785156,
+            "y": -12.435264110565186,
             "z": 0
           },
           "orientation": {
@@ -484,8 +361,8 @@
               "config": {
                 "type": "box",
                 "movable": true,
-                "width": 170,
-                "height": 4,
+                "width": -8,
+                "height": 24,
                 "offset": {
                   "x": 0,
                   "y": 0
@@ -498,8 +375,51 @@
             }
           ],
           "position": {
-            "x": 49,
-            "y": -10.894,
+            "x": 174.4881477355957,
+            "y": 49.28160095214844,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "23",
+          "name": "Hazard",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": true,
+                "width": -8,
+                "height": 24,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -45.14186429977417,
+            "y": 48.459407806396484,
             "z": 0
           },
           "orientation": {

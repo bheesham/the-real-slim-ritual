@@ -203,6 +203,11 @@
                 "id": "158",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "176",
+                "name": "Red",
+                "type": "tileMap"
               }
             ]
           },
@@ -236,6 +241,11 @@
               {
                 "id": "165",
                 "name": "Map",
+                "type": "tileMap"
+              },
+              {
+                "id": "177",
+                "name": "Map (1)",
                 "type": "tileMap"
               }
             ]
@@ -495,6 +505,11 @@
             "id": "140",
             "name": "Purple ball",
             "type": "sprite"
+          },
+          {
+            "id": "174",
+            "name": "Prefab",
+            "type": "scene"
           }
         ]
       },
@@ -507,6 +522,11 @@
             "id": "161",
             "name": "Red ball",
             "type": "sprite"
+          },
+          {
+            "id": "175",
+            "name": "Prefab",
+            "type": "scene"
           }
         ]
       }

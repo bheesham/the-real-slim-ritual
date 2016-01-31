@@ -4,7 +4,7 @@ module Game {
   export let playerBehavior: PrincessBehavior;
   export let currentMap: Sup.Actor;
   
-  export let color: number = 0;
+  export let color: number = 2;
   export let cloneExists = false;
         
   export let currentLevel = 0;

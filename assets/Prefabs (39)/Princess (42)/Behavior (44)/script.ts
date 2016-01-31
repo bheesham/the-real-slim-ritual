@@ -33,12 +33,12 @@ class PrincessBehavior extends Sup.Behavior {
   handleCloneCollisions(){
     if (this.cloneBody) {
       this.cloneTimer++;
-      if (this.cloneTimer > 3000){
-        Sup.log("Test");
+      if (this.cloneTimer > 30){
         Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,[this.cloneBody]);
         let t = this.actor.arcadeBody2D.getTouches();
         if (t.left || t.right || t.top || t.bottom){
           Game.cloneExists = false;
+          this.runSoundPlayer.stop();
           this.destroy();
         }
       }
@@ -235,13 +235,11 @@ class PrincessBehavior extends Sup.Behavior {
     }
 
     //varible needed for double jump validation
-    if (Sup.Input.isKeyDown("SPACE") &&  !this.doubleJump) 
+    if (Sup.Input.isKeyDown("SPACE")) 
     {
       if(!Game.cloneExists)
-        {
-        //this.statue.destroy();  
+        {  
         this.doubleJump = true;
-        //add base
         Game.cloneExists = true;
         this.clone = Sup.appendScene("Prefabs/Princess/PrincessPrefab")[0];
         this.cloneBody = this.clone.arcadeBody2D;

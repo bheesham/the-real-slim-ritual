@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "163",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "163",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -85,9 +85,9 @@
             }
           ],
           "position": {
-            "x": -32.484710693359375,
-            "y": -76.04187774658203,
-            "z": -10
+            "x": -32.485,
+            "y": -76.042,
+            "z": 0
           },
           "orientation": {
             "x": 0,
@@ -107,9 +107,9 @@
       ],
       "components": [],
       "position": {
-        "x": 29.554340362548828,
-        "y": 74.46492767333984,
-        "z": 10
+        "x": 29.554,
+        "y": 74.465,
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -331,6 +331,75 @@
         "x": 127.990234375,
         "y": 33.69154739379883,
         "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "15",
+      "name": "Hazards",
+      "children": [
+        {
+          "id": "16",
+          "name": "Hazard1",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 190,
+                "height": 3,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 23.74102020263672,
+            "y": -19.527233123779297,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 78.739,
+        "y": 20.913,
+        "z": 0
       },
       "orientation": {
         "x": 0,
