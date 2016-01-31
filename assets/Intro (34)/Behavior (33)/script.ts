@@ -1,10 +1,28 @@
 class IntroBehavior extends Sup.Behavior {
   awake() {
+    let that = this;
     Sup.setTimeout(3000, function() {
-      Game.loadNextLevel();
-      Game.start();
+      let act: Sup.Actor = Sup.getActor("Splash");
+      act.setPosition({
+        x: 0,
+        y: 0,
+        z: -10
+      });
+            
+      that.loadCredits();
     });
-    //Game.loadNextLevel(Act 1/Areas/7/Scene);
+  }
+  
+  loadCredits() {
+    let that = this;
+    Sup.setTimeout(3000, function() {
+      that.startGame();
+    });
+  }
+  
+  startGame() {
+    Game.loadNextLevel();
+    Game.start();
   }
 }
 

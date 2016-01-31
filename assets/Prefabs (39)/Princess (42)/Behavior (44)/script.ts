@@ -122,6 +122,8 @@ class PrincessBehavior extends Sup.Behavior {
     var i = 0 , j = 0;
     
     //find the values that the charcter is on to
+    
+    Sup.log(this.switchBodies);
     for(let switchn of this.switchBodies)
     {
       //define some varibles
@@ -130,22 +132,24 @@ class PrincessBehavior extends Sup.Behavior {
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2)>-1);
       if(a&&b)
         {
-          Game.doorInStage = true;
-          this.onSwitch = true;
-        }
-      else
-        {
           if (this.onSwitch){
-            Game.doorInStage = false;
-            this.onSwitch = false;
+          Game.doorInStage = true;
+          this.onSwitch = false;
           }
         }
-      if(this.gateBodies.length > 0 && !Game.doorInStage)
-        {
-          Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies);
-        }
+      else
+      {
+          Game.doorInStage = false;
+          this.onSwitch = true;
+      }
+      
       
       //if bothare truw for x and y axis
+  }
+    
+  if(this.gateBodies.length > 0 && Game.doorInStage)
+  {
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies);
   }
   //push whatever is left
   //for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}
