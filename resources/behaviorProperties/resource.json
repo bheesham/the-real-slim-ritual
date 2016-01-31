@@ -1,27 +1,10 @@
 {
   "behaviors": {
-    "StatueBehavior": {
-      "scriptId": "17",
-      "line": 2,
-      "parentBehavior": null,
-      "properties": []
-    },
     "IntroBehavior": {
       "scriptId": "33",
       "line": 0,
       "parentBehavior": null,
       "properties": []
-    },
-    "CameraBehavior": {
-      "scriptId": "38",
-      "line": 0,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "position",
-          "type": "Sup.Math.Vector3"
-        }
-      ]
     },
     "ScriptBehavior": {
       "scriptId": "41",
@@ -51,7 +34,7 @@
           "type": "number"
         },
         {
-          "name": "statue",
+          "name": "clone",
           "type": "any"
         },
         {

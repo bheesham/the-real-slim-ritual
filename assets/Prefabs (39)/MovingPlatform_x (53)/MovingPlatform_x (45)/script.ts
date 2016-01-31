@@ -1,7 +1,7 @@
 class MovingPlatform_xBehavior extends Sup.Behavior {
   locationInCycle = 0;
   directionOfCycle=true;
-  distanceFromCenter = 512;
+  distanceFromCenter = 200;
   speed = 0.2;
   gravity = 0.02;
 

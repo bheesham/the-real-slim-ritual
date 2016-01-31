@@ -1,0 +1,79 @@
+{
+  "formatVersion": 3,
+  "maps": [
+    "map"
+  ],
+  "filtering": "smooth",
+  "wrapping": "clampToEdge",
+  "pixelsPerUnit": 32,
+  "framesPerSecond": 10,
+  "opacity": null,
+  "alphaTest": 0.1,
+  "frameOrder": "rows",
+  "grid": {
+    "width": 288,
+    "height": 288
+  },
+  "origin": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "animations": [
+    {
+      "id": "0",
+      "name": "Run",
+      "startFrameIndex": 0,
+      "endFrameIndex": 7,
+      "speed": 1
+    },
+    {
+      "id": "1",
+      "name": "Statue",
+      "startFrameIndex": 8,
+      "endFrameIndex": 14,
+      "speed": 1
+    },
+    {
+      "id": "2",
+      "name": "Idle",
+      "startFrameIndex": 16,
+      "endFrameIndex": 16,
+      "speed": 1
+    },
+    {
+      "id": "3",
+      "name": "WallHug",
+      "startFrameIndex": 17,
+      "endFrameIndex": 17,
+      "speed": 1
+    },
+    {
+      "id": "4",
+      "name": "WallJump",
+      "startFrameIndex": 18,
+      "endFrameIndex": 22,
+      "speed": 1
+    },
+    {
+      "id": "5",
+      "name": "Fall",
+      "startFrameIndex": 24,
+      "endFrameIndex": 27,
+      "speed": 1
+    },
+    {
+      "id": "6",
+      "name": "Jump",
+      "startFrameIndex": 24,
+      "endFrameIndex": 27,
+      "speed": 1
+    }
+  ],
+  "mapSlots": {
+    "map": "map",
+    "light": null,
+    "specular": null,
+    "alpha": null,
+    "normal": null
+  }
+}

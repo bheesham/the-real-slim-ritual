@@ -4,7 +4,6 @@ class CameraBehavior extends Sup.Behavior {
   camera: Sup.Camera;
 
   awake() {
-    Game.cameraBehavior = this;
     Game.currentMap = this.actor;
     
     let cameraManActor = new Sup.Actor("Camera");
@@ -15,7 +14,7 @@ class CameraBehavior extends Sup.Behavior {
     
     cameraManActor.setPosition(-16, -10, 10);
     cameraManActor.camera.setOrthographicMode(true);
-    cameraManActor.camera.setOrthographicScale(70);
+    cameraManActor.camera.setOrthographicScale(140);
     
     Game.start();
   }
