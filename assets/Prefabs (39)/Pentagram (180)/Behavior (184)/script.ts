@@ -14,7 +14,8 @@ class PentagramItemBehavior extends Sup.Behavior {
       return;
     }
     
-    Game.controlOrange = true;
+    Game.canClone = true;
+    Sup.Audio.playSound("Sound/CloneSound");
     this.actor.spriteRenderer.setOpacity(0);
     this.actor.destroy();
   }

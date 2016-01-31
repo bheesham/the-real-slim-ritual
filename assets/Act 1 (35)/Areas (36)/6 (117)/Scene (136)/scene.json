@@ -26,8 +26,8 @@
         }
       ],
       "position": {
-        "x": 102.8,
-        "y": 59.8,
+        "x": 102.90279388427734,
+        "y": 59.79999923706055,
         "z": 10
       },
       "orientation": {
@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "125",
+                "tileMapAssetId": "118",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "125",
+                "tileMapAssetId": "118",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -257,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 8.011,
-        "y": 12,
+        "x": 9,
+        "y": 27,
         "z": 0
       },
       "orientation": {
@@ -306,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 71.53140258789062,
-            "y": 36.89619827270508,
+            "x": 72.25083923339844,
+            "y": -6.988691329956055,
             "z": 0
           },
           "orientation": {
@@ -328,7 +328,7 @@
       ],
       "components": [],
       "position": {
-        "x": 127.990234375,
+        "x": 130.86795043945312,
         "y": 33.69154739379883,
         "z": 10
       },
@@ -350,55 +350,11 @@
     {
       "id": "15",
       "name": "Hazards",
-      "children": [
-        {
-          "id": "16",
-          "name": "Hazard",
-          "children": [],
-          "components": [
-            {
-              "type": "ArcadeBody2D",
-              "config": {
-                "type": "box",
-                "movable": false,
-                "width": 3,
-                "height": 17,
-                "offset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "tileMapAssetId": null,
-                "tileSetPropertyName": null,
-                "layersIndex": null
-              },
-              "id": "0"
-            }
-          ],
-          "position": {
-            "x": -33.915727972984314,
-            "y": -6.303531646728516,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
-        "x": 35.63033676147461,
-        "y": 22.780061721801758,
+        "x": 72.90059661865234,
+        "y": 21.375577926635742,
         "z": 10
       },
       "orientation": {
@@ -415,6 +371,33 @@
       "visible": true,
       "layer": 0,
       "prefab": null
+    },
+    {
+      "id": "16",
+      "name": "ClonePowerup",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 106.12676239013672,
+        "y": 35.195594787597656,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "183"
+      }
     }
   ]
 }

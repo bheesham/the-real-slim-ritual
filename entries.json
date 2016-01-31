@@ -122,25 +122,8 @@
             ]
           },
           {
-            "id": "117",
-            "name": "5",
-            "type": null,
-            "children": [
-              {
-                "id": "136",
-                "name": "Scene",
-                "type": "scene"
-              },
-              {
-                "id": "118",
-                "name": "Map",
-                "type": "tileMap"
-              }
-            ]
-          },
-          {
             "id": "131",
-            "name": "6",
+            "name": "5",
             "type": null,
             "children": [
               {
@@ -150,6 +133,23 @@
               },
               {
                 "id": "128",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "117",
+            "name": "6",
+            "type": null,
+            "children": [
+              {
+                "id": "136",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "118",
                 "name": "Map",
                 "type": "tileMap"
               }

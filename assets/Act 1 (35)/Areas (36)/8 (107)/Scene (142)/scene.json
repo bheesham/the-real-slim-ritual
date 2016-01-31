@@ -291,7 +291,7 @@
               "type": "ArcadeBody2D",
               "config": {
                 "type": "box",
-                "movable": true,
+                "movable": false,
                 "width": 12,
                 "height": 5,
                 "offset": {
@@ -306,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 39.98402404785156,
-            "y": -12.229714632034302,
+            "x": 40.08680725097656,
+            "y": -4.727145195007324,
             "z": 0
           },
           "orientation": {
@@ -360,7 +360,7 @@
               "type": "ArcadeBody2D",
               "config": {
                 "type": "box",
-                "movable": true,
+                "movable": false,
                 "width": -8,
                 "height": 24,
                 "offset": {
@@ -403,7 +403,7 @@
               "type": "ArcadeBody2D",
               "config": {
                 "type": "box",
-                "movable": true,
+                "movable": false,
                 "width": -8,
                 "height": 24,
                 "offset": {

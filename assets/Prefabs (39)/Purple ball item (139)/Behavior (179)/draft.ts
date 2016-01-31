@@ -1,4 +1,4 @@
-class RedBallItemBehavior extends Sup.Behavior {
+class PurpleBallItemBehavior extends Sup.Behavior {
   princess: Sup.Actor;
   awake() {
     this.princess = Sup.getActor("Princess");
@@ -14,9 +14,11 @@ class RedBallItemBehavior extends Sup.Behavior {
       return;
     }
     
-    Game.controlOrange = true;
+    Game.controlGreen = true;
     this.actor.spriteRenderer.setAnimation("Death");
+    
     this.actor.destroy();
   }
 }
-Sup.registerBehavior(RedBallItemBehavior);
+
+Sup.registerBehavior(PurpleBallItemBehavior);

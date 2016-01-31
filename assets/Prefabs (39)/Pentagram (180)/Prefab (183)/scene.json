@@ -10,7 +10,7 @@
           "type": "SpriteRenderer",
           "config": {
             "spriteAssetId": "181",
-            "animationId": null,
+            "animationId": "0",
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,
@@ -51,7 +51,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "RedBallItemBehavior",
+            "behaviorName": "PentagramItemBehavior",
             "propertyValues": {}
           },
           "id": "3"
@@ -69,8 +69,8 @@
         "w": 1
       },
       "scale": {
-        "x": 8,
-        "y": 10,
+        "x": 4,
+        "y": 4,
         "z": 1
       },
       "visible": true,

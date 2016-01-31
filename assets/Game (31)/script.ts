@@ -13,6 +13,7 @@ module Game {
   export let controlGreen = false;
   export let orangeEnabled = true;
   export let greenEnabled = true;
+  export let doorInStage = false;
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});

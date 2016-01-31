@@ -26,7 +26,7 @@ class PrincessBehavior extends Sup.Behavior {
   cloneBody : Sup.ArcadePhysics2D.Body = null;
 
   onDestroy(){
-    this.runSoundPlayer.stop()
+    this.runSoundPlayer.stop();
   }
 
   awake() {
