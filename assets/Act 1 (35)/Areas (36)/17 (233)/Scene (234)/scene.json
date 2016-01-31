@@ -140,7 +140,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "235",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -149,7 +149,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "226",
+                "tileMapAssetId": "235",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -213,7 +213,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "228",
+                "tileMapAssetId": "237",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -233,7 +233,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "228",
+                "tileMapAssetId": "237",
                 "tileSetPropertyName": null,
                 "layersIndex": null
               },
@@ -302,7 +302,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "229",
+                "tileMapAssetId": "236",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -322,7 +322,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "229",
+                "tileMapAssetId": "236",
                 "tileSetPropertyName": null,
                 "layersIndex": null
               },
@@ -385,8 +385,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 197.5703582763672,
-        "y": 109.51780700683594,
+        "x": 111.9588623046875,
+        "y": 14.142691612243652,
         "z": 0
       },
       "orientation": {
