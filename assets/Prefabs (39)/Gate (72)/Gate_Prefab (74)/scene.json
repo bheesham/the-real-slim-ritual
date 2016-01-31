@@ -37,7 +37,7 @@
             "type": "box",
             "movable": true,
             "width": 1,
-            "height": 1,
+            "height": 4,
             "offset": {
               "x": 0,
               "y": 0

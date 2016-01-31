@@ -242,5 +242,57 @@
     "id": "52",
     "name": "Notes",
     "type": "script"
+  },
+  {
+    "id": "75",
+    "name": "Sound",
+    "type": null,
+    "children": [
+      {
+        "id": "76",
+        "name": "CloneSound",
+        "type": "sound"
+      },
+      {
+        "id": "77",
+        "name": "Song1",
+        "type": "sound"
+      },
+      {
+        "id": "78",
+        "name": "Song3",
+        "type": "sound"
+      },
+      {
+        "id": "79",
+        "name": "SongCredits",
+        "type": "sound"
+      },
+      {
+        "id": "80",
+        "name": "JumpSound1",
+        "type": "sound"
+      },
+      {
+        "id": "81",
+        "name": "JumpSound2",
+        "type": "sound"
+      },
+      {
+        "id": "82",
+        "name": "PowerupSound",
+        "type": "sound"
+      },
+      {
+        "id": "83",
+        "name": "RunningSound",
+        "type": "sound"
+      },
+      {
+        "id": "84",
+        "name": "MusicPlayerBehavior",
+        "type": "script"
+      }
+    ]
   }
 ]

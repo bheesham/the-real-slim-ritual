@@ -5,6 +5,7 @@ class CameraBehavior extends Sup.Behavior {
 
   awake() {
     Game.cameraBehavior = this;
+    Game.currentMap = this.actor;
     
     let cameraManActor = new Sup.Actor("Camera");
     new Sup.Camera(cameraManActor);
@@ -20,9 +21,7 @@ class CameraBehavior extends Sup.Behavior {
   }
 
   update() {
-    this.position = this.actor.getLocalPosition();
-    //if (this.position.x)
-    Game.currentMap = this.actor;
+    
   }
 }
 

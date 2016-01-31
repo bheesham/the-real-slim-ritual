@@ -161,6 +161,17 @@
           "type": "number"
         }
       ]
+    },
+    "MusicPlayerBehavior": {
+      "scriptId": "84",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "song",
+          "type": "string"
+        }
+      ]
     }
   }
 }

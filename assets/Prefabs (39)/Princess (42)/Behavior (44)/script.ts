@@ -10,6 +10,9 @@ class PrincessBehavior extends Sup.Behavior {
   doubleJump = false;
   airTime = 60;
   wallJumped = false;
+  mapDefaults: Sup.Actor[];
+
+  runSoundPlayer:Sup.Audio.SoundPlayer = Sup.Audio.playSound("Sound/RunningSound",0,{'loop':true});
 
   mapDefaultBodies: Sup.ArcadePhysics2D.Body[] = [];
   map_1_Bodies: Sup.ArcadePhysics2D.Body[] = [];
@@ -19,9 +22,14 @@ class PrincessBehavior extends Sup.Behavior {
 
   awake() {
     Game.playerBehavior = this;
+    this.mapDefaults = Sup.getActor("Map").getChildren();
   }
 
   updateCamera() {
+    //Game.cameraBehavior.cameraActor.getPosition();
+    let map: Sup.Actor = Sup.getActor("Map");
+       
+    
     Game.cameraBehavior.cameraActor.setLocalPosition({
       x: this.position.x,
       y: this.position.y,
@@ -29,14 +37,11 @@ class PrincessBehavior extends Sup.Behavior {
     });
   }
 
-  handleCollisions() {
-    this.mapDefaultBodies = [];
-    this.map_1_Bodies = [];
-    this.platformsBodies = [];
-    this.switchBodies = [];
+  handleCollisions()
+  {
+
     
-    let mapDefaults = Sup.getActor("Map").getChildren();
-    for(let mapDefault of mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
+    for(let mapDefault of this.mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
     
     if (Game.color == 1){
       let mapGreenDefaults = Sup.getActor("Map_Green").getChildren();
@@ -50,24 +55,46 @@ class PrincessBehavior extends Sup.Behavior {
     
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
   }
-  handleSwitches()
+  
+  handleSwitches() 
   {
+
+    
     let switchDefaults = Sup.getActor("Switch").getChildren();
     for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
-    let 
-    
+    let gateDefaults = Sup.getActor("Gate").getChildren();
+    for(let gateDefault of gateDefaults)this.gateBodies.push(gateDefault.arcadeBody2D);
+    var i = 0 , j = 0;
     for(let switchn of this.switchBodies)
     {
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
       if(a&&b)
         {
-          //Sup.log("DOWNAGE");
+          for(let aGate of this.gateBodies)
+            {
+              if(aGate.actor['__inner'].name === switchn.actor['__inner'].name)
+                {
+                  this.gateBodies.splice(j--,1);
+                  this.switchBodies.splice(i--,1);
+                }
+              j++
+            }
         }
+      i++;
     }
+  for(var i = 0;i< this.gateBodies.length;i++)
+    {
+      Sup.log(this.gateBodies[i].actor['__inner'].name);
+      this.mapDefaultBodies.push(this.gateBodies[i]);
+      //Sup.log(this.mapDefaultBodies[i].actor['__inner'].name)
+      Sup.log(this.mapDefaultBodies.length);
+    }
+    
   }
 
 
+  
   handleAfterCollisions(velocity) {
     //returns whether we are touching the bottom of a special collision
     
@@ -86,17 +113,25 @@ class PrincessBehavior extends Sup.Behavior {
     } 
     return touchingBottom;
   }
+    initializeArrays()
+    {
+        this.switchBodies = [];
+       this.gateBodies = [];
+       this.mapDefaultBodies = [];
+       this.map_1_Bodies = [];
+       this.platformsBodies = [];
 
+    }
     update() 
     {
-      
+    this.initializeArrays();
+    this.handleSwitches();
     this.handleCollisions();
-      
+
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchRight = this.actor.arcadeBody2D.getTouches().right;
     let touchLeft = this.actor.arcadeBody2D.getTouches().left;
       
-
     if (touchBottom){
       this.wallJumped = false;
     }
@@ -149,13 +184,14 @@ class PrincessBehavior extends Sup.Behavior {
         }
       }
     }
-    this.handleSwitches();
+      
     touchBottom = touchBottom || this.handleAfterCollisions(velocity);
     
     if (touchBottom) {
       this.doubleJump = false;
       if (Sup.Input.wasKeyJustPressed("UP")) {
         velocity.y = this.jumpSpeed;
+        Sup.Audio.playSound("Sound/JumpSound" + Sup.Math.Random.integer(1,2));
         this.actor.spriteRenderer.setAnimation("Jump");
       } else {
         // Here, we should play either "Idle" or "Run" depending on the horizontal speed
@@ -192,8 +228,12 @@ class PrincessBehavior extends Sup.Behavior {
       }
     }
     
-    
-    
+    if (Math.abs(velocity.x) > 0 && touchBottom){
+      this.runSoundPlayer.setVolume(1);
+    }else{
+      this.runSoundPlayer.setVolume(0);
+    }
+      
     this.position = this.actor.getLocalPosition();
     this.updateCamera();
     
