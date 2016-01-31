@@ -123,33 +123,32 @@ class PrincessBehavior extends Sup.Behavior {
     
     //find the values that the charcter is on to
     
-    Sup.log(this.switchBodies);
     for(let switchn of this.switchBodies)
     {
       //define some varibles
       //Sup.log((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2));
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-3.4))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2)>-1);
-      if(a&&b)
-        {
-          if (this.onSwitch){
-          Game.doorInStage = true;
-          this.onSwitch = false;
-          }
-        }
+      
+      if(a&&b){//if collision{
+        Game.doorInStage = false;
+        this.onSwitch = true;
+      }
       else
       {
-          Game.doorInStage = false;
-          this.onSwitch = true;
+          if (this.onSwitch){
+            Game.doorInStage = true;
+            this.onSwitch = false;
+          }
       }
       
-      
-      //if bothare truw for x and y axis
   }
+  
+  Sup.log(Game.doorInStage);
     
   if(this.gateBodies.length > 0 && Game.doorInStage)
   {
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies);
+    Sup.log(Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies));
   }
   //push whatever is left
   //for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}

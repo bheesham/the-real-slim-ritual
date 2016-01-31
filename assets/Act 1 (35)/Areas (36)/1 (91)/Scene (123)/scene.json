@@ -346,6 +346,31 @@
       "visible": true,
       "layer": 0,
       "prefab": null
+    },
+    {
+      "id": "15",
+      "name": "Keyboard",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 65.62346649169922,
+        "y": 52.995887756347656,
+        "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
     }
   ]
 }

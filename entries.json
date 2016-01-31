@@ -15,6 +15,11 @@
         "type": "sprite"
       },
       {
+        "id": "193",
+        "name": "Credits",
+        "type": "sprite"
+      },
+      {
         "id": "33",
         "name": "Behavior",
         "type": "script"
@@ -598,6 +603,38 @@
             "id": "184",
             "name": "Behavior",
             "type": "script"
+          }
+        ]
+      },
+      {
+        "id": "194",
+        "name": "Keyboard",
+        "type": null,
+        "children": [
+          {
+            "id": "195",
+            "name": "Space Keyboard",
+            "type": "sprite"
+          },
+          {
+            "id": "196",
+            "name": "E Keyboard",
+            "type": "sprite"
+          },
+          {
+            "id": "197",
+            "name": "W Keyboard",
+            "type": "sprite"
+          },
+          {
+            "id": "198",
+            "name": "Arrow Keyboard",
+            "type": "sprite"
+          },
+          {
+            "id": "199",
+            "name": "Q Keyboard",
+            "type": "sprite"
           }
         ]
       }

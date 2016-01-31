@@ -13,17 +13,18 @@ module Game {
   export let controlGreen = false;
   export let orangeEnabled = true;
   export let greenEnabled = true;
+  
   export let doorInStage = false;
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
-    Game.loadNextLevel();
   }
   
   export function loadLevel(level: number) {
     this.canClone = false;
     this.currentLevel = level;
     this.cloneExists = false;
+    this.doorInStage = false;
     Sup.loadScene(`Act 1/Areas/${level}/Scene`);
   }
   
