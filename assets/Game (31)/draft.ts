@@ -17,7 +17,6 @@ module Game {
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
-    Game.loadNextLevel();
   }
   
   export function loadLevel(level: number) {

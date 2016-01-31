@@ -12,7 +12,7 @@ class RedBallItemBehavior extends Sup.Behavior {
       return;
     }
     
-    if (!Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.princess.arcadeBody2D)) {
+    if (!Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.princess.arcadeBody2D) || this.des == false) {
       return;
     }
     

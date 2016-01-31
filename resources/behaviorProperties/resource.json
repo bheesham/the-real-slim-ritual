@@ -60,6 +60,10 @@
         {
           "name": "cloneTimer",
           "type": "number"
+        },
+        {
+          "name": "onSwitch",
+          "type": "boolean"
         }
       ]
     },
@@ -202,6 +206,12 @@
           "type": "boolean"
         }
       ]
+    },
+    "GateBehavior": {
+      "scriptId": "192",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

@@ -13,6 +13,7 @@ class PrincessBehavior extends Sup.Behavior {
   mapDefaults: Sup.Actor[];
   active:boolean = true;
   cloneTimer:number = 0;
+  onSwitch:boolean = false;
 
   runSoundPlayer:Sup.Audio.SoundPlayer = Sup.Audio.playSound("Sound/RunningSound",0,{'loop':true});
 
@@ -104,7 +105,8 @@ class PrincessBehavior extends Sup.Behavior {
 
   handleSwitches() 
   {
-
+    this.gateBodies = [];
+    
     //initiate the objects in Switch and Gate
     if (Sup.getActor("Switch")){
       let switchDefaults = Sup.getActor("Switch").getChildren();
@@ -123,42 +125,30 @@ class PrincessBehavior extends Sup.Behavior {
     for(let switchn of this.switchBodies)
     {
       //define some varibles
-      var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
-      var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
+      //Sup.log((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2));
+      var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-3.4))<2);
+      var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2)>-1);
       if(a&&b)
         {
           Game.doorInStage = true;
+          this.onSwitch = true;
         }
       else
         {
-          Game.doorInStage = false;
+          if (this.onSwitch){
+            Game.doorInStage = false;
+            this.onSwitch = false;
+          }
         }
       if(this.gateBodies.length > 0 && !Game.doorInStage)
         {
-          this.mapDefaultBodies.push(this.gateBodies[0]);
+          Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies);
         }
+      
       //if bothare truw for x and y axis
-      if(a&&b)
-        {
-          //loops though the same gate that corrosponds to the switch
-          for(let aGate of this.gateBodies)
-            {
-              //gets rif of the two same
-              if(aGate.actor['__inner'].name === switchn.actor['__inner'].name)
-                {
-                  this.gateBodies.splice(j--,1);
-                  this.switchBodies.splice(i--,1);
-                }
-              j++
-            }
-        }
-      i++;
-    }
-    //push whatever is left
-  for(var i = 0;i< this.gateBodies.length;i++)
-    {
-      this.mapDefaultBodies.push(this.gateBodies[i]);
-    }
+  }
+  //push whatever is left
+  //for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}
     
   }
 
