@@ -14,14 +14,14 @@ class PentagramItemBehavior extends Sup.Behavior {
       return;
     }
     
-    if (!Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.princess.arcadeBody2D) || this.des == false) {
-      return;
-    }
-    
     if (!this.des){
       this.opacity -= this.fadeSpeed;
       if (this.opacity < 0) this.opacity = 0;
       this.actor.spriteRenderer.setOpacity(this.opacity);
+    }
+    
+    if (!Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, this.princess.arcadeBody2D) || this.des == false) {
+      return;
     }
     
     Game.canClone = true;
