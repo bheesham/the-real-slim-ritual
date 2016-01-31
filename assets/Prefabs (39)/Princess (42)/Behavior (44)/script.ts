@@ -11,6 +11,7 @@ class PrincessBehavior extends Sup.Behavior {
   airTime = 60;
   wallJumped = false;
   mapDefaults: Sup.Actor[];
+  active:boolean = true;
 
   runSoundPlayer:Sup.Audio.SoundPlayer = Sup.Audio.playSound("Sound/RunningSound",0,{'loop':true});
 
@@ -26,10 +27,6 @@ class PrincessBehavior extends Sup.Behavior {
   }
 
   updateCamera() {
-    //Game.cameraBehavior.cameraActor.getPosition();
-    let map: Sup.Actor = Sup.getActor("Map");
-       
-    
     Game.cameraBehavior.cameraActor.setLocalPosition({
       x: this.position.x,
       y: this.position.y,
@@ -59,20 +56,28 @@ class PrincessBehavior extends Sup.Behavior {
   handleSwitches() 
   {
 
-    
+    //initiate the objects in Switch and Gate
     let switchDefaults = Sup.getActor("Switch").getChildren();
     for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
     let gateDefaults = Sup.getActor("Gate").getChildren();
     for(let gateDefault of gateDefaults)this.gateBodies.push(gateDefault.arcadeBody2D);
+    
+    //for slpicing the bodies
     var i = 0 , j = 0;
+    
+    //find the values that the charcter is on to
     for(let switchn of this.switchBodies)
     {
+      //define some varibles
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
+      //if bothare truw for x and y axis
       if(a&&b)
         {
+          //loops though the same gate that corrosponds to the switch
           for(let aGate of this.gateBodies)
             {
+              //gets rif of the two same
               if(aGate.actor['__inner'].name === switchn.actor['__inner'].name)
                 {
                   this.gateBodies.splice(j--,1);
@@ -83,12 +88,10 @@ class PrincessBehavior extends Sup.Behavior {
         }
       i++;
     }
+    //push whatever is left
   for(var i = 0;i< this.gateBodies.length;i++)
     {
-      Sup.log(this.gateBodies[i].actor['__inner'].name);
       this.mapDefaultBodies.push(this.gateBodies[i]);
-      //Sup.log(this.mapDefaultBodies[i].actor['__inner'].name)
-      Sup.log(this.mapDefaultBodies.length);
     }
     
   }
@@ -128,6 +131,10 @@ class PrincessBehavior extends Sup.Behavior {
     this.handleSwitches();
     this.handleCollisions();
 
+    for (var i = 0; i < this.mapDefaultBodies.length;i++)
+      {
+        //Sup.log(this.mapDefaultBodies.length);
+      }
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchRight = this.actor.arcadeBody2D.getTouches().right;
     let touchLeft = this.actor.arcadeBody2D.getTouches().left;
@@ -139,6 +146,7 @@ class PrincessBehavior extends Sup.Behavior {
     // As explained above, we get the current velocity
     let velocity = this.actor.arcadeBody2D.getVelocity();
 
+      
     // We override the `.x` component based on the player's input
     if (Sup.Input.isKeyDown("LEFT")) {
       velocity.x -= this.speed;
@@ -174,7 +182,9 @@ class PrincessBehavior extends Sup.Behavior {
         //this.statue.destroy();  
         this.doubleJump = true;
         //add base
-        this.statue = Sup.appendScene("Prefabs/Statue/StatuePrefab")[0];
+        this.statue = Sup.appendScene("Prefabs/Princess/PrincessPrefab")[0];
+        Sup.log(this.statue.getBehaviors());
+        this.statue.getBehaviors()[0].statue = this.actor;
         this.statue.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
         
         if (!touchBottom){

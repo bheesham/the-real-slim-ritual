@@ -123,6 +123,11 @@
             "id": "44",
             "name": "Behavior",
             "type": "script"
+          },
+          {
+            "id": "90",
+            "name": "PrincessPrefab",
+            "type": "scene"
           }
         ]
       },
@@ -200,6 +205,23 @@
           {
             "id": "74",
             "name": "Gate_Prefab",
+            "type": "scene"
+          }
+        ]
+      },
+      {
+        "id": "85",
+        "name": "GlitchCamera",
+        "type": null,
+        "children": [
+          {
+            "id": "86",
+            "name": "GlitchCameraBehavior",
+            "type": "script"
+          },
+          {
+            "id": "87",
+            "name": "Scene",
             "type": "scene"
           }
         ]
@@ -294,5 +316,10 @@
         "type": "script"
       }
     ]
+  },
+  {
+    "id": "88",
+    "name": "Sprite",
+    "type": "sprite"
   }
 ]

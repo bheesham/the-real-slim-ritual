@@ -69,6 +69,10 @@
         {
           "name": "wallJumped",
           "type": "boolean"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
         }
       ]
     },
@@ -172,6 +176,12 @@
           "type": "string"
         }
       ]
+    },
+    "GlitchCameraBehavior": {
+      "scriptId": "86",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

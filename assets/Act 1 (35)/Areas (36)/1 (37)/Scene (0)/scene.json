@@ -419,6 +419,33 @@
           "prefab": {
             "sceneAssetId": "61"
           }
+        },
+        {
+          "id": "23",
+          "name": "MovingPlatform 2",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 47,
+            "y": 60,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "60"
+          }
         }
       ],
       "components": [],
@@ -505,8 +532,8 @@
           "children": [],
           "components": [],
           "position": {
-            "x": -25,
-            "y": -31.775,
+            "x": -15.13360595703125,
+            "y": -31.775001525878906,
             "z": 0
           },
           "orientation": {
