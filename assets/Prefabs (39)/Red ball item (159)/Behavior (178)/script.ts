@@ -1,7 +1,6 @@
 class RedBallItemBehavior extends Sup.Behavior {
   princess: Sup.Actor;
-  des: boolean = false;
-
+  des: boolean = true;
 
   awake() {
     this.princess = Sup.getActor("Princess");
@@ -17,16 +16,12 @@ class RedBallItemBehavior extends Sup.Behavior {
       return;
     }
     
-    this.des = true;
     Game.controlOrange = true;
     this.actor.spriteRenderer.setAnimation("Death");
     
     if (this.des) {
+      Game.destroyActor(this.actor, 1000);
       this.des = false;
-      let that = this;
-      Sup.setTimeout(1000, function() {
-        that.actor.destroy();
-      });
     }
   }
 }

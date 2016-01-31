@@ -1,5 +1,7 @@
 class PentagramItemBehavior extends Sup.Behavior {
   princess: Sup.Actor;
+  des: boolean = true;
+
   awake() {
     this.princess = Sup.getActor("Princess");
   }
@@ -16,8 +18,11 @@ class PentagramItemBehavior extends Sup.Behavior {
     
     Game.canClone = true;
     Sup.Audio.playSound("Sound/CloneSound");
-    this.actor.spriteRenderer.setOpacity(0);
-    this.actor.destroy();
+    
+    if (this.des) {
+      Game.destroyActor(this.actor, 1000);
+      this.des = false;
+    }
   }
 }
 

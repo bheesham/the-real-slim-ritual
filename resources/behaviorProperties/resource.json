@@ -196,7 +196,12 @@
       "scriptId": "184",
       "line": 0,
       "parentBehavior": null,
-      "properties": []
+      "properties": [
+        {
+          "name": "des",
+          "type": "boolean"
+        }
+      ]
     }
   }
 }

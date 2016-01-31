@@ -43,7 +43,13 @@ module Game {
   
   export function destroyActor(that: Sup.Actor, interval) {
     Sup.setTimeout(interval, function() {
-      that.destroy();
+      if (that != null) {
+        if (that.spriteRenderer) {
+          that.spriteRenderer.setOpacity(0);
+        }
+        
+        that.destroy();
+      }
     });
   }
 }

@@ -125,28 +125,24 @@ class PrincessBehavior extends Sup.Behavior {
       //define some varibles
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-6.8))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+6.8)>-1);
-      //if bothare truw for x and y axis
       if(a&&b)
         {
-          //loops though the same gate that corrosponds to the switch
-          for(let aGate of this.gateBodies)
-            {
-              //gets rif of the two same
-              if(aGate.actor['__inner'].name === switchn.actor['__inner'].name)
-                {
-                  this.gateBodies.splice(j--,1);
-                  this.switchBodies.splice(i--,1);
-                }
-              j++
-            }
+          Game.doorInStage = true;
         }
-      i++;
-    }
-    //push whatever is left
-  for(var i = 0;i< this.gateBodies.length;i++)
-    {
-      this.mapDefaultBodies.push(this.gateBodies[i]);
-    }
+      else
+        {
+          Game.doorInStage = false;
+        }
+      if(this.gateBodies.length > 0 && !Game.doorInStage)
+        {
+          this.mapDefaultBodies.push(this.gateBodies[0]);
+        }
+      
+      //if bothare truw for x and y axis
+  }
+  //push whatever is left
+  for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}
+    
   }
 
   handleAfterCollisions(velocity) {
@@ -169,8 +165,7 @@ class PrincessBehavior extends Sup.Behavior {
     }
     return touchingBottom;
   }
-    initializeArrays()
-    {
+    initializeArrays() {
         this.switchBodies = [];
        this.gateBodies = [];
        this.mapDefaultBodies = [];
@@ -178,6 +173,8 @@ class PrincessBehavior extends Sup.Behavior {
        this.platformsBodies = [];
 
     }
+      
+      
     update() 
     {
     this.initializeArrays();
