@@ -353,9 +353,9 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 40.381961822509766,
-        "y": 22.947071075439453,
-        "z": 10
+        "x": 57.666,
+        "y": 6.498,
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -371,7 +371,7 @@
       "visible": true,
       "layer": 0,
       "prefab": {
-        "sceneAssetId": null
+        "sceneAssetId": "183"
       }
     }
   ]

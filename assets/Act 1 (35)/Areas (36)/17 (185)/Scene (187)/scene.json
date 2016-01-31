@@ -26,8 +26,8 @@
         }
       ],
       "position": {
-        "x": 102.90279388427734,
-        "y": 59.79999923706055,
+        "x": 102.8,
+        "y": 59.8,
         "z": 10
       },
       "orientation": {
@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "118",
+                "tileMapAssetId": "188",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "118",
+                "tileMapAssetId": "188",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -129,35 +129,7 @@
     {
       "id": "1",
       "name": "Switch",
-      "children": [
-        {
-          "id": "20",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 80.3376042842865,
-            "y": 19.330017805099487,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "66"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -182,35 +154,7 @@
     {
       "id": "2",
       "name": "Gate",
-      "children": [
-        {
-          "id": "19",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 194.27576804161072,
-            "y": 27.139343976974487,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "74"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -313,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 9,
-        "y": 27,
+        "x": 5.7502570152282715,
+        "y": 22.878725051879883,
         "z": 0
       },
       "orientation": {
@@ -362,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 73.68968200683594,
-            "y": -8.42753791809082,
+            "x": 78.62283325195312,
+            "y": -19.218911170959473,
             "z": 0
           },
           "orientation": {
@@ -384,7 +328,7 @@
       ],
       "components": [],
       "position": {
-        "x": 130.86795043945312,
+        "x": 127.990234375,
         "y": 33.69154739379883,
         "z": 10
       },
@@ -402,58 +346,6 @@
       "visible": true,
       "layer": 0,
       "prefab": null
-    },
-    {
-      "id": "15",
-      "name": "Hazards",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 72.90059661865234,
-        "y": 21.375577926635742,
-        "z": 10
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "16",
-      "name": "ClonePowerup",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 104.02559661865234,
-        "y": 28.557092666625977,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": {
-        "sceneAssetId": "183"
-      }
     }
   ]
 }

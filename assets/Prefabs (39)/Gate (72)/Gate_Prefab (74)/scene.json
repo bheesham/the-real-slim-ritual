@@ -36,8 +36,8 @@
           "config": {
             "type": "box",
             "movable": true,
-            "width": 1,
-            "height": 4,
+            "width": 4,
+            "height": 16,
             "offset": {
               "x": 0,
               "y": 0
@@ -61,9 +61,9 @@
         "w": 1
       },
       "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
+        "x": 4,
+        "y": 4,
+        "z": 4
       },
       "visible": true,
       "layer": 0,
