@@ -235,6 +235,10 @@ class PrincessBehavior extends Sup.Behavior {
     } else if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange && !this.clone) {
       Game.orangeEnabled = !Game.orangeEnabled;
     }
+      
+      if (Sup.Input.wasKeyJustPressed("R")) {
+          Game.reloadLevel();
+      }
 
     if (Game.debug) {
       if (Sup.Input.wasKeyJustPressed("ADD")) {

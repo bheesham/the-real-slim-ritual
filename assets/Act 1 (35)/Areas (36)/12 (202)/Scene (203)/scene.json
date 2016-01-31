@@ -129,7 +129,35 @@
     {
       "id": "1",
       "name": "Switch",
-      "children": [],
+      "children": [
+        {
+          "id": "21",
+          "name": "Switch",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 196.946,
+            "y": 22.727,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "66"
+          }
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -154,7 +182,35 @@
     {
       "id": "2",
       "name": "Gate",
-      "children": [],
+      "children": [
+        {
+          "id": "22",
+          "name": "Gate",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 4.553,
+            "y": 30.435,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "74"
+          }
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -370,8 +426,8 @@
             }
           ],
           "position": {
-            "x": -127.33810287714005,
-            "y": -6.577592849731445,
+            "x": -129.18805253505707,
+            "y": -5.344293594360352,
             "z": 0
           },
           "orientation": {

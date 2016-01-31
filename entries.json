@@ -288,13 +288,18 @@
             "type": null,
             "children": [
               {
-                "id": "168",
+                "id": "207",
                 "name": "Scene",
                 "type": "scene"
               },
               {
-                "id": "169",
+                "id": "208",
                 "name": "Map",
+                "type": "tileMap"
+              },
+              {
+                "id": "209",
+                "name": "Orange",
                 "type": "tileMap"
               }
             ]
