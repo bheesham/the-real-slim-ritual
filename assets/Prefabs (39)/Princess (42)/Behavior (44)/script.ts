@@ -229,15 +229,11 @@ class PrincessBehavior extends Sup.Behavior {
       this.actor.spriteRenderer.setHorizontalFlip(true);
     }
       
-    if (Sup.Input.wasKeyJustPressed("W") && Game.controlGreen && !this.clone) {
-      Game.greenEnabled = !Game.greenEnabled;
-      if (Game.greenEnabled){
-        Game.orangeEnabled = false;
-      }
-    } else if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange && !this.clone) {
+
+    if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange && !this.clone) {
       Game.orangeEnabled = !Game.orangeEnabled;
-      if (Game.orangeEnabled){
-        Game.greenEnabled = false;
+      if (Game.controlGreen){
+        Game.greenEnabled = !Game.orangeEnabled;
       }
     }
       

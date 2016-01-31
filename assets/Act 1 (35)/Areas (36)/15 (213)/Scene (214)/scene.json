@@ -620,7 +620,7 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "197",
+            "spriteAssetId": "196",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -665,8 +665,8 @@
           "children": [],
           "components": [],
           "position": {
-            "x": -91.16133880615234,
-            "y": 6.372047424316406,
+            "x": -61.04829406738281,
+            "y": -0.308319091796875,
             "z": 0
           },
           "orientation": {

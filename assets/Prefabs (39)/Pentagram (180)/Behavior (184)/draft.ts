@@ -19,9 +19,8 @@ class PentagramItemBehavior extends Sup.Behavior {
     }
     
     if (!this.des){
-      this.opacity -= this.fadeSpeed;
-      if (this.opacity < 0) this.opacity = 0;
-      this.actor.spriteRenderer.setOpacity(this.opacity);
+      this.opacity -= fadeSpeed;
+      if 
     }
     
     Game.canClone = true;

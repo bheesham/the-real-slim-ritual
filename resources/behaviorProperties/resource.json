@@ -204,6 +204,14 @@
         {
           "name": "des",
           "type": "boolean"
+        },
+        {
+          "name": "opacity",
+          "type": "number"
+        },
+        {
+          "name": "fadeSpeed",
+          "type": "number"
         }
       ]
     },
