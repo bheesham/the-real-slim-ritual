@@ -245,7 +245,7 @@
               },
               {
                 "id": "177",
-                "name": "Map (1)",
+                "name": "Orange",
                 "type": "tileMap"
               }
             ]
@@ -510,6 +510,11 @@
             "id": "174",
             "name": "Prefab",
             "type": "scene"
+          },
+          {
+            "id": "179",
+            "name": "Behavior",
+            "type": "script"
           }
         ]
       },
@@ -527,6 +532,11 @@
             "id": "175",
             "name": "Prefab",
             "type": "scene"
+          },
+          {
+            "id": "178",
+            "name": "Behavior",
+            "type": "script"
           }
         ]
       }

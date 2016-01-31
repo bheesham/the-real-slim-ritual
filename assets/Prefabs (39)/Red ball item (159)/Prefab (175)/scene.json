@@ -27,7 +27,7 @@
           "type": "ArcadeBody2D",
           "config": {
             "type": "box",
-            "movable": false,
+            "movable": true,
             "width": 7,
             "height": 10,
             "offset": {
@@ -39,6 +39,22 @@
             "layersIndex": null
           },
           "id": "1"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "DefyTheGravyBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "RedBallItemBehavior",
+            "propertyValues": {}
+          },
+          "id": "3"
         }
       ],
       "position": {

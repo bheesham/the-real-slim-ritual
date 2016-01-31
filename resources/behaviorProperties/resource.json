@@ -169,6 +169,18 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "RedBallItemBehavior": {
+      "scriptId": "178",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "PurpleBallItemBehavior": {
+      "scriptId": "179",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }

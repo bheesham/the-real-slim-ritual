@@ -4,10 +4,14 @@ module Game {
   export let playerBehavior: PrincessBehavior;
   export let currentMap: Sup.Actor;
   
-  export let color: number = 2;
   export let cloneExists = false;
         
   export let currentLevel = 0;
+  
+  export let controlOrange = false;
+  export let controlGreen = false;
+  export let orangeEnabled = true;
+  export let greenEnabled = true;
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});

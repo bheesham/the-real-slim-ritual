@@ -3,18 +3,17 @@ class MapOrangeBehavior extends Sup.Behavior {
   opacity = 0;
   
   awake() {
-    if (Game.color == 2){
+    if (Game.orangeEnabled){
       this.opacity = 1;
     }else{
       this.opacity = 0;
     }
     
     this.actor.tileMapRenderer.setLayerOpacity(0,this.opacity);
-    this.actor.tileMapRenderer.setLayerOpacity(1,this.opacity);
   }
 
   update() {
-    if (Game.color == 2){
+    if (Game.orangeEnabled){
       if (this.opacity < 1){
         this.opacity += this.fadeSpeed;
       }
@@ -23,7 +22,6 @@ class MapOrangeBehavior extends Sup.Behavior {
     }
     
     this.actor.tileMapRenderer.setLayerOpacity(0,this.opacity);
-    this.actor.tileMapRenderer.setLayerOpacity(1,this.opacity);
   }
 }
 Sup.registerBehavior(MapOrangeBehavior);

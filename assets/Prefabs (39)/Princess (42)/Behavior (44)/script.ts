@@ -39,6 +39,8 @@ class PrincessBehavior extends Sup.Behavior {
         if (t.left || t.right || t.top || t.bottom){
           Game.cloneExists = false;
           this.runSoundPlayer.stop();
+          this.actor.spriteRenderer.setOpacity(0);
+          Sup.Audio.playSound("Sound/CloneSound");
           this.destroy();
         }
       }
@@ -49,14 +51,14 @@ class PrincessBehavior extends Sup.Behavior {
   {
     for(let mapDefault of this.mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
     
-    if (Game.color == 1){
+    if (Game.greenEnabled){
       if (Sup.getActor("Map_Green")){
         let mapGreenDefaults = Sup.getActor("Map_Green").getChildren();
         for(let mapGreenDefault of mapGreenDefaults) this.mapDefaultBodies.push(mapGreenDefault.arcadeBody2D);
       }
     }
     
-    if (Game.color == 2){
+    if (Game.orangeEnabled){
       if (Sup.getActor("Map_Orange")){
         let mapOrangeDefaults = Sup.getActor("Map_Orange").getChildren();
         for(let mapOrangeDefault of mapOrangeDefaults) this.mapDefaultBodies.push(mapOrangeDefault.arcadeBody2D);
@@ -209,12 +211,10 @@ class PrincessBehavior extends Sup.Behavior {
       this.actor.spriteRenderer.setHorizontalFlip(true);
     }
       
-    if (Sup.Input.isKeyDown("Q")) {
-      Game.color = 0;
-    } else if (Sup.Input.isKeyDown("W")) {
-      Game.color = 1;
-    } else if (Sup.Input.isKeyDown("E")) {
-      Game.color = 2;
+    if (Sup.Input.wasKeyJustPressed("W") && Game.controlGreen) {
+      Game.greenEnabled = !Game.greenEnabled;
+    } else if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange) {
+      Game.orangeEnabled = !Game.orangeEnabled;
     }
 
     if (Game.debug) {
