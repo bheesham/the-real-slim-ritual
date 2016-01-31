@@ -7,10 +7,10 @@ module Game {
   export let canClone = false;
   export let cloneExists = false;
         
-  export let currentLevel = 0;
+  export let currentLevel = -1;
   
   export let songIndex = 0;
-  export let songPlayer = null;
+  export let songPlayer:Sup.Audio.SoundPlayer = null;
         
   export let controlOrange = false;
   export let controlGreen = false;
@@ -20,7 +20,7 @@ module Game {
   export let doorInStage = true;
   
   export function start() {
-    selectSong(0);
+    this.selectSong(0);
   }
   
   export function loadLevel(level: number) {
@@ -80,5 +80,6 @@ module Game {
         this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
       }
     }
+    Sup.log(this.songPlayer);
   }
 }

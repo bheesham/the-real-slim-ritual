@@ -45,6 +45,11 @@
                 "id": "138",
                 "name": "Scene",
                 "type": "scene"
+              },
+              {
+                "id": "231",
+                "name": "Script",
+                "type": "script"
               }
             ]
           },
@@ -374,34 +379,41 @@
                 "id": "226",
                 "name": "Map",
                 "type": "tileMap"
+              },
+              {
+                "id": "229",
+                "name": "Red",
+                "type": "tileMap"
+              },
+              {
+                "id": "228",
+                "name": "Purple",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "233",
+            "name": "17",
+            "type": null,
+            "children": [
+              {
+                "id": "234",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "235",
+                "name": "Map",
+                "type": "tileMap"
               }
             ]
           }
         ]
       },
       {
-        "id": "4",
-        "name": "Tile Set",
-        "type": "tileSet"
-      },
-      {
         "id": "218",
         "name": "Test",
-        "type": "tileSet"
-      },
-      {
-        "id": "96",
-        "name": "Map Tile Set (Dark Red)",
-        "type": "tileSet"
-      },
-      {
-        "id": "97",
-        "name": "Map Tile Set (Blue)",
-        "type": "tileSet"
-      },
-      {
-        "id": "50",
-        "name": "Tiles",
         "type": "tileSet"
       },
       {

@@ -22,7 +22,6 @@ class IntroBehavior extends Sup.Behavior {
   
   startGame() {
     Game.loadNextLevel();
-    Game.start();
   }
 }
 

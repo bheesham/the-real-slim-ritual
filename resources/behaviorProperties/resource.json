@@ -253,6 +253,12 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "DummySceneBehavior": {
+      "scriptId": "231",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": []
     }
   }
 }
