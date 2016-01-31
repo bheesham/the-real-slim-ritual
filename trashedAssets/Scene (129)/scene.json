@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 121,
+            "orthographicScale": 120,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -26,8 +26,8 @@
         }
       ],
       "position": {
-        "x": 103,
-        "y": 60,
+        "x": 102.8,
+        "y": 59.8,
         "z": 10
       },
       "orientation": {
@@ -65,16 +65,16 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "25",
                 "tileSetPropertyName": null,
-                "layersIndex": null
+                "layersIndex": "0"
               },
               "id": "0"
             },
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "92",
+                "tileMapAssetId": "25",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -257,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 15,
-        "y": 57,
+        "x": 8.936278343200684,
+        "y": 57.82219314575195,
         "z": 0
       },
       "orientation": {
@@ -295,6 +295,75 @@
       "position": {
         "x": 59.56462097167969,
         "y": 46.40737533569336,
+        "z": 10
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "13",
+      "name": "Portals",
+      "children": [
+        {
+          "id": "14",
+          "name": "Portal1",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": false,
+                "width": 3,
+                "height": 15,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 315.4162902832031,
+            "y": 21.685508728027344,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
         "z": 10
       },
       "orientation": {

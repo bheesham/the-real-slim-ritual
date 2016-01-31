@@ -20,6 +20,8 @@ class PrincessBehavior extends Sup.Behavior {
   platformsBodies: Sup.ArcadePhysics2D.Body[] = [];
   switchBodies : Sup.ArcadePhysics2D.Body[] = [];
   gateBodies : Sup.ArcadePhysics2D.Body[] = [];
+  portalBodies : Sup.ArcadePhysics2D.Body[] = [];
+  hazardBodies : Sup.ArcadePhysics2D.Body[] = [];
 
   awake() {
     Game.playerBehavior = this;
@@ -49,6 +51,36 @@ class PrincessBehavior extends Sup.Behavior {
     Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
   }
   
+  handleHazards() 
+  {
+    if (Sup.getActor("Hazards")){
+      let hazardDefaults = Sup.getActor("Hazards").getChildren();
+      for(let hazardDefault of hazardDefaults) this.hazardBodies.push(hazardDefault.arcadeBody2D);
+    }
+    
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.hazardBodies);
+    let t = this.actor.arcadeBody2D.getTouches();
+    if (t.left || t.right || t.top || t.bottom){
+      this.runSoundPlayer.stop();
+      Game.reloadLevel();
+    }
+  }
+
+  handlePortals() 
+  {
+    if (Sup.getActor("Portals")){
+      let portalDefaults = Sup.getActor("Portals").getChildren();
+      for(let portalDefault of portalDefaults) this.portalBodies.push(portalDefault.arcadeBody2D);
+    }
+    
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.portalBodies);
+    let t = this.actor.arcadeBody2D.getTouches();
+    if (t.left || t.right || t.top || t.bottom){
+      this.runSoundPlayer.stop();
+      Game.loadNextLevel();
+    }
+  }
+
   handleSwitches() 
   {
 
@@ -94,11 +126,8 @@ class PrincessBehavior extends Sup.Behavior {
     {
       this.mapDefaultBodies.push(this.gateBodies[i]);
     }
-    
   }
 
-
-  
   handleAfterCollisions(velocity) {
     //returns whether we are touching the bottom of a special collision
     
@@ -131,8 +160,11 @@ class PrincessBehavior extends Sup.Behavior {
     update() 
     {
     this.initializeArrays();
+    this.handlePortals();
+    this.handleHazards();
     this.handleSwitches();
     this.handleCollisions();
+    
 
     for (var i = 0; i < this.mapDefaultBodies.length;i++)
       {
@@ -161,21 +193,30 @@ class PrincessBehavior extends Sup.Behavior {
       this.actor.spriteRenderer.setHorizontalFlip(true);
     }
       
-    if (Sup.Input.isKeyDown("1")){
+    if (Sup.Input.isKeyDown("Q")) {
       Game.color = 0;
-    }else if (Sup.Input.isKeyDown("2")){
+    } else if (Sup.Input.isKeyDown("W")) {
       Game.color = 1;
-    }else if (Sup.Input.isKeyDown("3")){
+    } else if (Sup.Input.isKeyDown("E")) {
       Game.color = 2;
     }
+
+    if (Game.debug) {
+      if (Sup.Input.wasKeyJustPressed("ADD")) {
+        this.runSoundPlayer.stop();
+        Game.loadNextLevel();
+      }
       
-    
+      if (Sup.Input.wasKeyJustPressed("SUBTRACT")) {
+        this.runSoundPlayer.stop();
+        Game.loadPrevLevel();
+      }
+    }
+      
     velocity.x /= 1.1;
     if (Math.abs(velocity.x) < 0.05){
       velocity.x = 0;
-    }//this.statue
-    //time in the air
-    
+    }
 
     //varible needed for double jump validation
     if (Sup.Input.isKeyDown("SPACE") &&  !this.doubleJump) 
@@ -229,13 +270,13 @@ class PrincessBehavior extends Sup.Behavior {
       }
       
       if (Sup.Input.wasKeyJustPressed("UP") && touchLeft) {
-        velocity.y = this.jumpSpeed;
-        velocity.x = this.speed * this.wallJumpSpeed;
+        velocity.y = this.jumpSpeed*2/3;
+        velocity.x = this.speed * this.wallJumpSpeed + 0.5;
         this.actor.spriteRenderer.setAnimation("WallJump");
         this.wallJumped = true;
       } else if (Sup.Input.wasKeyJustPressed("UP") && touchRight) {
-        velocity.y = this.jumpSpeed;
-        velocity.x = -(this.speed * this.wallJumpSpeed);
+        velocity.y = this.jumpSpeed*2/3;
+        velocity.x = -(this.speed * this.wallJumpSpeed + 0.5);
         this.actor.spriteRenderer.setAnimation("WallJump");
         this.wallJumped = true;
       }

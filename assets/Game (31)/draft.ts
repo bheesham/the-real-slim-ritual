@@ -7,7 +7,7 @@ module Game {
   export let color: number = 0;
   export let cloneExists = false;
         
-  export let currentLevel = 6;
+  export let currentLevel = 0;
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});

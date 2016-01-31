@@ -1,6 +1,8 @@
 class IntroBehavior extends Sup.Behavior {
   awake() {
-    Sup.loadScene("Act 1/Areas/16/Scene");
+    Game.start();
+    Game.loadNextLevel();
+    //Game.loadNextLevel(Act 1/Areas/7/Scene);
   }
 }
 
