@@ -3,7 +3,7 @@
   "maps": [
     "map"
   ],
-  "filtering": "smooth",
+  "filtering": "pixelated",
   "wrapping": "clampToEdge",
   "pixelsPerUnit": 32,
   "framesPerSecond": 8,
@@ -12,7 +12,7 @@
   "frameOrder": "rows",
   "grid": {
     "width": 64,
-    "height": 67
+    "height": 64
   },
   "origin": {
     "x": 0.5,
@@ -23,14 +23,14 @@
       "id": "0",
       "name": "Animation",
       "startFrameIndex": 0,
-      "endFrameIndex": 3,
+      "endFrameIndex": 9,
       "speed": 1
     },
     {
       "id": "1",
       "name": "Death",
-      "startFrameIndex": 4,
-      "endFrameIndex": 11,
+      "startFrameIndex": 10,
+      "endFrameIndex": 24,
       "speed": 1
     }
   ],
