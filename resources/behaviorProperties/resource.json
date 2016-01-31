@@ -212,6 +212,33 @@
       "line": 0,
       "parentBehavior": null,
       "properties": []
+    },
+    "Area13PlatformBehavior": {
+      "scriptId": "212",
+      "line": 0,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "locationInCycle",
+          "type": "number"
+        },
+        {
+          "name": "directionOfCycle",
+          "type": "boolean"
+        },
+        {
+          "name": "distanceFromCenter",
+          "type": "number"
+        },
+        {
+          "name": "speed",
+          "type": "number"
+        },
+        {
+          "name": "gravity",
+          "type": "number"
+        }
+      ]
     }
   }
 }

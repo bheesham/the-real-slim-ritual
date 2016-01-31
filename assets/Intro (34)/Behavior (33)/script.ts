@@ -1,7 +1,7 @@
 class IntroBehavior extends Sup.Behavior {
   awake() {
     let that = this;
-    Sup.setTimeout(3000, function() {
+    Sup.setTimeout(10, function() {
       let act: Sup.Actor = Sup.getActor("Splash");
       act.setPosition({
         x: 0,
@@ -15,7 +15,7 @@ class IntroBehavior extends Sup.Behavior {
   
   loadCredits() {
     let that = this;
-    Sup.setTimeout(3000, function() {
+    Sup.setTimeout(10, function() {
       that.startGame();
     });
   }

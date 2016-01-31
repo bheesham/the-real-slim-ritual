@@ -301,6 +301,23 @@
                 "id": "209",
                 "name": "Orange",
                 "type": "tileMap"
+              },
+              {
+                "id": "210",
+                "name": "Platform",
+                "type": null,
+                "children": [
+                  {
+                    "id": "211",
+                    "name": "Prefab",
+                    "type": "scene"
+                  },
+                  {
+                    "id": "212",
+                    "name": "Behavior",
+                    "type": "script"
+                  }
+                ]
               }
             ]
           },

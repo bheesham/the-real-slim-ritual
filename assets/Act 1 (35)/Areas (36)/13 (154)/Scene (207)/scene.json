@@ -129,35 +129,7 @@
     {
       "id": "1",
       "name": "Switch",
-      "children": [
-        {
-          "id": "21",
-          "name": "Switch",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 196.946,
-            "y": 22.727,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "66"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -182,35 +154,7 @@
     {
       "id": "2",
       "name": "Gate",
-      "children": [
-        {
-          "id": "22",
-          "name": "Gate",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 4.553,
-            "y": 30.435,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "74"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -235,7 +179,35 @@
     {
       "id": "3",
       "name": "Platforms",
-      "children": [],
+      "children": [
+        {
+          "id": "23",
+          "name": "Platform",
+          "children": [],
+          "components": [],
+          "position": {
+            "x": 107.2328450679779,
+            "y": 25.13267970085144,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": {
+            "sceneAssetId": "211"
+          }
+        }
+      ],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -377,8 +349,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 199.78933715820312,
-        "y": 44.255916595458984,
+        "x": 197.63107299804688,
+        "y": 21.23433494567871,
         "z": 0
       },
       "orientation": {
@@ -426,8 +398,8 @@
             }
           ],
           "position": {
-            "x": -129.18805253505707,
-            "y": -5.344293594360352,
+            "x": -129.29082429409027,
+            "y": -8.324769973754883,
             "z": 0
           },
           "orientation": {
@@ -621,33 +593,6 @@
       "visible": true,
       "layer": 0,
       "prefab": null
-    },
-    {
-      "id": "20",
-      "name": "Pentagram",
-      "children": [],
-      "components": [],
-      "position": {
-        "x": 134.71153259277344,
-        "y": 30.82667350769043,
-        "z": 0
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": {
-        "sceneAssetId": "183"
-      }
     }
   ]
 }
