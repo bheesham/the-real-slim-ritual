@@ -56,6 +56,10 @@
         {
           "name": "active",
           "type": "boolean"
+        },
+        {
+          "name": "cloneTimer",
+          "type": "number"
         }
       ]
     },

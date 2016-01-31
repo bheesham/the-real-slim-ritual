@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 121,
+            "orthographicScale": 120,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "119",
+                "tileMapAssetId": "92",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "119",
+                "tileMapAssetId": "92",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -179,62 +179,7 @@
     {
       "id": "3",
       "name": "Platforms",
-      "children": [
-        {
-          "id": "13",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 123.4782292842865,
-            "y": 13.830188512802124,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "60"
-          }
-        },
-        {
-          "id": "14",
-          "name": "Prefab",
-          "children": [],
-          "components": [],
-          "position": {
-            "x": 164.96363425254822,
-            "y": 57.272791624069214,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": {
-            "sceneAssetId": "61"
-          }
-        }
-      ],
+      "children": [],
       "components": [],
       "position": {
         "x": -2.9303700923919678,
@@ -312,8 +257,8 @@
       "children": [],
       "components": [],
       "position": {
-        "x": 7.49743127822876,
-        "y": 19.69270896911621,
+        "x": 5.7502570152282715,
+        "y": 22.878725051879883,
         "z": 0
       },
       "orientation": {
@@ -334,20 +279,20 @@
       }
     },
     {
-      "id": "18",
+      "id": "13",
       "name": "Portals",
       "children": [
         {
-          "id": "16",
-          "name": "Portals",
+          "id": "14",
+          "name": "Portal1",
           "children": [],
           "components": [
             {
               "type": "ArcadeBody2D",
               "config": {
                 "type": "box",
-                "movable": true,
-                "width": 2,
+                "movable": false,
+                "width": 3,
                 "height": 15,
                 "offset": {
                   "x": 0,
@@ -361,8 +306,8 @@
             }
           ],
           "position": {
-            "x": 141.83396911621094,
-            "y": 104.52260494232178,
+            "x": 78.62283325195312,
+            "y": -19.218911170959473,
             "z": 0
           },
           "orientation": {
@@ -383,77 +328,8 @@
       ],
       "components": [],
       "position": {
-        "x": 61.26264953613281,
-        "y": 8.833504676818848,
-        "z": 10
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "20",
-      "name": "Hazards",
-      "children": [
-        {
-          "id": "21",
-          "name": "Hazard",
-          "children": [],
-          "components": [
-            {
-              "type": "ArcadeBody2D",
-              "config": {
-                "type": "box",
-                "movable": true,
-                "width": 170,
-                "height": 4,
-                "offset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "tileMapAssetId": null,
-                "tileSetPropertyName": null,
-                "layersIndex": null
-              },
-              "id": "0"
-            }
-          ],
-          "position": {
-            "x": 49,
-            "y": -10.894,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        }
-      ],
-      "components": [],
-      "position": {
-        "x": 38.275325775146484,
-        "y": 12.362110137939453,
+        "x": 127.990234375,
+        "y": 33.69154739379883,
         "z": 10
       },
       "orientation": {

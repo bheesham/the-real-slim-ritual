@@ -43,7 +43,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "",
+            "behaviorName": "MovingPlatform_xBehavior",
             "propertyValues": {}
           },
           "id": "5"

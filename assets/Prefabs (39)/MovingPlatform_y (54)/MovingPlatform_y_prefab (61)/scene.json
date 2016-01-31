@@ -39,6 +39,14 @@
             "layersIndex": null
           },
           "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "MovingPlatform_yBehavior",
+            "propertyValues": {}
+          },
+          "id": "4"
         }
       ],
       "position": {

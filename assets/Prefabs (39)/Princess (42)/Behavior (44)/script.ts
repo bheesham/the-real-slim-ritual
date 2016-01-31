@@ -12,6 +12,7 @@ class PrincessBehavior extends Sup.Behavior {
   wallJumped = false;
   mapDefaults: Sup.Actor[];
   active:boolean = true;
+  cloneTimer:number = 0;
 
   runSoundPlayer:Sup.Audio.SoundPlayer = Sup.Audio.playSound("Sound/RunningSound",0,{'loop':true});
 
@@ -22,16 +23,30 @@ class PrincessBehavior extends Sup.Behavior {
   gateBodies : Sup.ArcadePhysics2D.Body[] = [];
   portalBodies : Sup.ArcadePhysics2D.Body[] = [];
   hazardBodies : Sup.ArcadePhysics2D.Body[] = [];
+  cloneBody : Sup.ArcadePhysics2D.Body = null;
 
   awake() {
     Game.playerBehavior = this;
     this.mapDefaults = Sup.getActor("Map").getChildren();
   }
 
+  handleCloneCollisions(){
+    if (this.cloneBody) {
+      this.cloneTimer++;
+      if (this.cloneTimer > 3000){
+        Sup.log("Test");
+        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,[this.cloneBody]);
+        let t = this.actor.arcadeBody2D.getTouches();
+        if (t.left || t.right || t.top || t.bottom){
+          Game.cloneExists = false;
+          this.destroy();
+        }
+      }
+    }
+  }
+
   handleCollisions()
   {
-
-    
     for(let mapDefault of this.mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
     
     if (Game.color == 1){
@@ -162,6 +177,7 @@ class PrincessBehavior extends Sup.Behavior {
     this.initializeArrays();
     this.handlePortals();
     this.handleHazards();
+    this.handleCloneCollisions();
     this.handleSwitches();
     this.handleCollisions();
     
@@ -228,8 +244,8 @@ class PrincessBehavior extends Sup.Behavior {
         //add base
         Game.cloneExists = true;
         this.clone = Sup.appendScene("Prefabs/Princess/PrincessPrefab")[0];
-        Sup.log(this.clone);
-        this.clone.arcadeBody2D.warpPosition(this.actor.getLocalPosition());
+        this.cloneBody = this.clone.arcadeBody2D;
+        this.cloneBody.warpPosition(this.actor.getLocalPosition());
         
         if (!touchBottom){
           this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(new Sup.Math.Vector3(0,this.actor.arcadeBody2D.getSize()['height'],0)));

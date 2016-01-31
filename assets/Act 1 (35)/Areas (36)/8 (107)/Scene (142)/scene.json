@@ -65,7 +65,7 @@
                   "x": 0,
                   "y": 0
                 },
-                "tileMapAssetId": "119",
+                "tileMapAssetId": "109",
                 "tileSetPropertyName": null,
                 "layersIndex": "0"
               },
@@ -74,7 +74,7 @@
             {
               "type": "TileMapRenderer",
               "config": {
-                "tileMapAssetId": "119",
+                "tileMapAssetId": "109",
                 "tileSetAssetId": null,
                 "castShadow": false,
                 "receiveShadow": false,
@@ -233,6 +233,74 @@
           "prefab": {
             "sceneAssetId": "61"
           }
+        },
+        {
+          "id": "22",
+          "name": "x_Motion",
+          "children": [],
+          "components": [
+            {
+              "type": "ArcadeBody2D",
+              "config": {
+                "type": "box",
+                "movable": true,
+                "width": 1,
+                "height": 1,
+                "offset": {
+                  "x": 0,
+                  "y": 0
+                },
+                "tileMapAssetId": null,
+                "tileSetPropertyName": null,
+                "layersIndex": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "DefyTheGravyBehavior",
+                "propertyValues": {}
+              },
+              "id": "1"
+            },
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "spriteAssetId": "58",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "2"
+            }
+          ],
+          "position": {
+            "x": 136.3270833492279,
+            "y": 36.463236570358276,
+            "z": 10
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 11,
+            "y": 0.2,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
         }
       ],
       "components": [],

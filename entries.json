@@ -57,21 +57,6 @@
                 "id": "92",
                 "name": "Map",
                 "type": "tileMap"
-              },
-              {
-                "id": "109",
-                "name": "Map 8",
-                "type": "tileMap"
-              },
-              {
-                "id": "95",
-                "name": "Map3",
-                "type": "tileMap"
-              },
-              {
-                "id": "105",
-                "name": "Map4",
-                "type": "tileMap"
               }
             ]
           },
@@ -190,6 +175,142 @@
           {
             "id": "107",
             "name": "8",
+            "type": null,
+            "children": [
+              {
+                "id": "142",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "109",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "150",
+            "name": "9",
+            "type": null,
+            "children": [
+              {
+                "id": "157",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "158",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "151",
+            "name": "10",
+            "type": null,
+            "children": [
+              {
+                "id": "162",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "163",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "152",
+            "name": "11",
+            "type": null,
+            "children": [
+              {
+                "id": "164",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "165",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "153",
+            "name": "12",
+            "type": null,
+            "children": [
+              {
+                "id": "166",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "167",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "154",
+            "name": "13",
+            "type": null,
+            "children": [
+              {
+                "id": "168",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "169",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "155",
+            "name": "14",
+            "type": null,
+            "children": [
+              {
+                "id": "170",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "171",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "156",
+            "name": "15",
+            "type": null,
+            "children": [
+              {
+                "id": "172",
+                "name": "Scene",
+                "type": "scene"
+              },
+              {
+                "id": "173",
+                "name": "Map",
+                "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "141",
+            "name": "16",
             "type": null,
             "children": [
               {
@@ -372,7 +493,19 @@
         "children": [
           {
             "id": "140",
-            "name": "Sprite",
+            "name": "Purple ball",
+            "type": "sprite"
+          }
+        ]
+      },
+      {
+        "id": "159",
+        "name": "Red ball item",
+        "type": null,
+        "children": [
+          {
+            "id": "161",
+            "name": "Red ball",
             "type": "sprite"
           }
         ]
