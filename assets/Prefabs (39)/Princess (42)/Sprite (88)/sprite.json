@@ -36,7 +36,7 @@
     {
       "id": "2",
       "name": "Idle",
-      "startFrameIndex": 16,
+      "startFrameIndex": 8,
       "endFrameIndex": 16,
       "speed": 1
     },

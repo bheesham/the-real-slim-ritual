@@ -60,23 +60,6 @@
                 "id": "105",
                 "name": "Map4",
                 "type": "tileMap"
-              },
-              {
-                "id": "107",
-                "name": "16",
-                "type": null,
-                "children": [
-                  {
-                    "id": "106",
-                    "name": "Scene",
-                    "type": "scene"
-                  },
-                  {
-                    "id": "108",
-                    "name": "Map",
-                    "type": "tileMap"
-                  }
-                ]
               }
             ]
           },
@@ -99,6 +82,18 @@
                 "id": "64",
                 "name": "Map_Orange",
                 "type": "tileMap"
+              }
+            ]
+          },
+          {
+            "id": "107",
+            "name": "16",
+            "type": null,
+            "children": [
+              {
+                "id": "106",
+                "name": "Scene",
+                "type": "scene"
               }
             ]
           }

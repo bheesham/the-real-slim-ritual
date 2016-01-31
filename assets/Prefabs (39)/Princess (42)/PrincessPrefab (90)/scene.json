@@ -9,8 +9,8 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "43",
-            "animationId": "4",
+            "spriteAssetId": "88",
+            "animationId": "2",
             "horizontalFlip": true,
             "verticalFlip": false,
             "castShadow": false,
