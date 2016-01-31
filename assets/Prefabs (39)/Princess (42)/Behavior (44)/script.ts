@@ -230,9 +230,9 @@ class PrincessBehavior extends Sup.Behavior {
       this.actor.spriteRenderer.setHorizontalFlip(true);
     }
       
-    if (Sup.Input.wasKeyJustPressed("W") && Game.controlGreen) {
+    if (Sup.Input.wasKeyJustPressed("W") && Game.controlGreen && !this.clone) {
       Game.greenEnabled = !Game.greenEnabled;
-    } else if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange) {
+    } else if (Sup.Input.wasKeyJustPressed("E") && Game.controlOrange && !this.clone) {
       Game.orangeEnabled = !Game.orangeEnabled;
     }
 
@@ -254,10 +254,8 @@ class PrincessBehavior extends Sup.Behavior {
     }
 
     //varible needed for double jump validation
-    if (Sup.Input.isKeyDown("SPACE")) 
-    {
-      if(!Game.cloneExists && Game.canClone)
-        {  
+    if (Sup.Input.isKeyDown("SPACE")) {
+      if(!Game.cloneExists && Game.canClone) {  
         this.doubleJump = true;
         Game.cloneExists = true;
         this.clone = Sup.appendScene("Prefabs/Princess/PrincessPrefab")[0];
