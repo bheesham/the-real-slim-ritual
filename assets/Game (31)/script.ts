@@ -77,7 +77,7 @@ module Game {
         if (this.songPlayer){
           this.songPlayer.stop();
         }
-        this.songPlayer = Sup.Audio.playSound("Sound/Song1",0.2,{'loop':true});
+        this.songPlayer = Sup.Audio.playSound("Sound/Song2",0.2,{'loop':true});
       }
     }
     Sup.log(this.songPlayer);

@@ -21,7 +21,7 @@ class PurpleBallItemBehavior extends Sup.Behavior {
     
     if (this.des) {
       Game.selectSong(2);
-      Sup.Audio.playSound("Sound/PowerupSound");
+      //Sup.Audio.playSound("Sound/PowerupSound");
       Game.destroyActor(this.actor, 1000);
       this.des = false;
     }
