@@ -47,6 +47,14 @@
             "layersIndex": null
           },
           "id": "2"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "GateBehavior",
+            "propertyValues": {}
+          },
+          "id": "3"
         }
       ],
       "position": {

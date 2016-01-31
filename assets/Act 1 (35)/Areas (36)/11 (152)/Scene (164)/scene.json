@@ -263,6 +263,14 @@
                 "shaderAssetId": null
               },
               "id": "1"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "MapOrangeBehavior",
+                "propertyValues": {}
+              },
+              "id": "2"
             }
           ],
           "position": {

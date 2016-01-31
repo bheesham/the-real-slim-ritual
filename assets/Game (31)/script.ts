@@ -14,7 +14,7 @@ module Game {
   export let orangeEnabled = true;
   export let greenEnabled = true;
   
-  export let doorInStage = false;
+  export let doorInStage = true;
         
   export function start() {
     Sup.Audio.playSound("Sound/Song3",0.2,{'loop':true});
@@ -24,7 +24,7 @@ module Game {
     this.canClone = false;
     this.currentLevel = level;
     this.cloneExists = false;
-    this.doorInStage = false;
+    this.doorInStage = true;
     Sup.loadScene(`Act 1/Areas/${level}/Scene`);
   }
   
