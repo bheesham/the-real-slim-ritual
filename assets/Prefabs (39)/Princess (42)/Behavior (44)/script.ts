@@ -26,7 +26,7 @@ class PrincessBehavior extends Sup.Behavior {
   hazardBodies : Sup.ArcadePhysics2D.Body[] = [];
   cloneBody : Sup.ArcadePhysics2D.Body = null;
 
-  onDestroy(){
+  onDestroy() {
     this.runSoundPlayer.stop();
   }
 
@@ -34,96 +34,102 @@ class PrincessBehavior extends Sup.Behavior {
     Game.playerBehavior = this;
     this.mapDefaults = Sup.getActor("Map").getChildren();
     
-    if (Game.controlGreen){
+    if (Game.controlGreen) {
       this.actor.spriteRenderer.setSprite("Prefabs/Princess/Princess Purple");
-    }else if (Game.controlOrange){
+    } else if (Game.controlOrange) {
       this.actor.spriteRenderer.setSprite("Prefabs/Princess/Princess Red");
-    }else{
+    } else {
       this.actor.spriteRenderer.setSprite("Prefabs/Princess/Sprite");
     }
   }
 
-  handleCloneCollisions(){
+  handleCloneCollisions() {
     if (this.cloneBody) {
       this.cloneTimer++;
-      if (this.cloneTimer > 30){
-        Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,[this.cloneBody]);
-        let t = this.actor.arcadeBody2D.getTouches();
-        if (t.left || t.right || t.top || t.bottom){
-          Game.cloneExists = false;
-          this.runSoundPlayer.stop();
-          this.actor.spriteRenderer.setOpacity(0);
-          Sup.Audio.playSound("Sound/CloneSound");
-          this.destroy();
-        }
+      if (this.cloneTimer > 30 &&
+          Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, [this.cloneBody])) {
+        Game.cloneExists = false;
+        this.runSoundPlayer.stop();
+        this.actor.spriteRenderer.setOpacity(0);
+        Sup.Audio.playSound("Sound/CloneSound");
+        this.destroy();
       }
     }
   }
 
-  handleCollisions()
-  {
-    for(let mapDefault of this.mapDefaults) this.mapDefaultBodies.push(mapDefault.arcadeBody2D);
+  handleCollisions() {
+    for(let mapDefault of this.mapDefaults) {
+      this.mapDefaultBodies.push(mapDefault.arcadeBody2D); 
+    }
     
-    if (Game.greenEnabled){
-      if (Sup.getActor("Map_Green")){
+    if (Game.greenEnabled) {
+      if (Sup.getActor("Map_Green")) {
         let mapGreenDefaults = Sup.getActor("Map_Green").getChildren();
-        for(let mapGreenDefault of mapGreenDefaults) this.mapDefaultBodies.push(mapGreenDefault.arcadeBody2D);
+        for (let mapGreenDefault of mapGreenDefaults) {
+          this.mapDefaultBodies.push(mapGreenDefault.arcadeBody2D);
+        }
       }
     }
     
-    if (Game.orangeEnabled){
-      if (Sup.getActor("Map_Orange")){
+    if (Game.orangeEnabled) {
+      if (Sup.getActor("Map_Orange")) {
         let mapOrangeDefaults = Sup.getActor("Map_Orange").getChildren();
-        for(let mapOrangeDefault of mapOrangeDefaults) this.mapDefaultBodies.push(mapOrangeDefault.arcadeBody2D);
+        for(let mapOrangeDefault of mapOrangeDefaults) {
+          this.mapDefaultBodies.push(mapOrangeDefault.arcadeBody2D); 
+        }
       }
     }
     
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.mapDefaultBodies);
+    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,
+                                 this.mapDefaultBodies);
   }
   
-  handleHazards() 
-  {
-    if (Sup.getActor("Hazards")){
+  handleHazards() {
+    if (Sup.getActor("Hazards")) {
       let hazardDefaults = Sup.getActor("Hazards").getChildren();
-      for(let hazardDefault of hazardDefaults) this.hazardBodies.push(hazardDefault.arcadeBody2D);
+      for (let hazardDefault of hazardDefaults) {
+        this.hazardBodies.push(hazardDefault.arcadeBody2D);
+      }
     }
     
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.hazardBodies);
-    let t = this.actor.arcadeBody2D.getTouches();
-    if (t.left || t.right || t.top || t.bottom){
+    if (Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, 
+                                     this.hazardBodies)) {
       this.runSoundPlayer.stop();
       Game.reloadLevel();
     }
   }
 
-  handlePortals() 
-  {
-    if (Sup.getActor("Portals")){
+  handlePortals() {
+    if (Sup.getActor("Portals")) {
       let portalDefaults = Sup.getActor("Portals").getChildren();
-      for(let portalDefault of portalDefaults) this.portalBodies.push(portalDefault.arcadeBody2D);
+      for(let portalDefault of portalDefaults) {
+        this.portalBodies.push(portalDefault.arcadeBody2D);
+      }
     }
     
-    Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.portalBodies);
-    let t = this.actor.arcadeBody2D.getTouches();
-    if (t.left || t.right || t.top || t.bottom){
+    if (Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D, 
+                                     this.portalBodies)) {
       this.runSoundPlayer.stop();
       Game.loadNextLevel();
     }
   }
 
-  handleSwitches() 
-  {
+  handleSwitches()  {
     this.gateBodies = [];
     
     //initiate the objects in Switch and Gate
-    if (Sup.getActor("Switch")){
+    if (Sup.getActor("Switch")) {
       let switchDefaults = Sup.getActor("Switch").getChildren();
-      for(let switchDefault of switchDefaults) this.switchBodies.push(switchDefault.arcadeBody2D);
+      for (let switchDefault of switchDefaults) {
+        this.switchBodies.push(switchDefault.arcadeBody2D);
+      }
     }
     
-    if (Sup.getActor("Gate")){
+    if (Sup.getActor("Gate")) {
       let gateDefaults = Sup.getActor("Gate").getChildren();
-      for(let gateDefault of gateDefaults)this.gateBodies.push(gateDefault.arcadeBody2D);
+      for (let gateDefault of gateDefaults) {
+        this.gateBodies.push(gateDefault.arcadeBody2D);
+      }
     }
     
     //for slpicing the bodies
@@ -131,36 +137,30 @@ class PrincessBehavior extends Sup.Behavior {
     
     //find the values that the charcter is on to
     
-    for(let switchn of this.switchBodies)
-    {
+    for (let switchn of this.switchBodies) {
       //define some varibles
       //Sup.log((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2));
       var a = (Math.abs((switchn.actor.getLocalPosition().x -this.actor.getLocalPosition().x-3.4))<2);
       var b = ((switchn.actor.getLocalPosition().y -this.actor.getLocalPosition().y+2.2)>-1);
       
-      if(a&&b){//if collision{
+      //if collision{
+      if (a&&b) {
         Game.doorInStage = false;
         this.onSwitch = true;
-      }
-      else
-      {
+      } else {
           if (this.onSwitch){
             Game.doorInStage = true;
             this.onSwitch = false;
           }
       }
-      
-  }
+    }
   
-  Sup.log(Game.doorInStage);
-    
-  if(this.gateBodies.length > 0 && Game.doorInStage)
-  {
-    Sup.log(Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies));
-  }
-  //push whatever is left
-  //for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}
-    
+    if (this.gateBodies.length > 0 && Game.doorInStage) {
+      Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,this.gateBodies);
+    }
+  
+    //push whatever is left
+    //for(var i = 0;i< this.gateBodies.length;i++){this.mapDefaultBodies.push(this.gateBodies[i]);}
   }
 
   handleAfterCollisions(velocity) {
@@ -168,45 +168,46 @@ class PrincessBehavior extends Sup.Behavior {
     
     let touchingBottom = false;
     
-    if (Sup.getActor("Platforms")){
-      let platformDefaults = Sup.getActor("Platforms").getChildren();
-      for(let platformDefault of platformDefaults){
+    if (Sup.getActor("Platforms")) {
+      let platformDefaults = Sup.getActor("Platforms").getChildren();  
+      for (let platformDefault of platformDefaults) {
         Sup.ArcadePhysics2D.collides(this.actor.arcadeBody2D,[platformDefault.arcadeBody2D]);
         let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
          touchingBottom = touchingBottom || touchBottom;
 
-        if (touchBottom){
-          this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(platformDefault.arcadeBody2D.getVelocity().x,platformDefault.arcadeBody2D.getVelocity().y,0));
+        if (touchBottom) {
+          this.actor.arcadeBody2D.warpPosition(this.actor
+                                               .getLocalPosition()
+                                               .add(platformDefault.arcadeBody2D.getVelocity().x,
+                                                    platformDefault.arcadeBody2D.getVelocity().y,
+                                                    0));
           velocity.y = -0.01;
         }      
       } 
     }
+    
     return touchingBottom;
   }
-    initializeArrays() {
-        this.switchBodies = [];
-       this.gateBodies = [];
-       this.mapDefaultBodies = [];
-       this.map_1_Bodies = [];
-       this.platformsBodies = [];
+    
 
-    }
+
+  initializeArrays() {
+    this.switchBodies = [];
+    this.gateBodies = [];
+    this.mapDefaultBodies = [];
+    this.map_1_Bodies = [];
+    this.platformsBodies = [];
+  }
       
       
-    update() 
-    {
+  update() {
     this.initializeArrays();
     this.handlePortals();
     this.handleHazards();
     this.handleCloneCollisions();
     this.handleSwitches();
     this.handleCollisions();
-    
 
-    for (var i = 0; i < this.mapDefaultBodies.length;i++)
-      {
-        //Sup.log(this.mapDefaultBodies.length);
-      }
     let touchBottom = this.actor.arcadeBody2D.getTouches().bottom;
     let touchRight = this.actor.arcadeBody2D.getTouches().right;
     let touchLeft = this.actor.arcadeBody2D.getTouches().left;
@@ -242,12 +243,12 @@ class PrincessBehavior extends Sup.Behavior {
       }
 
     if (Game.debug) {
-      if (Sup.Input.wasKeyJustPressed("ADD")) {
+      if (Sup.Input.wasKeyJustPressed("N")) {
         this.runSoundPlayer.stop();
         Game.loadNextLevel();
       }
       
-      if (Sup.Input.wasKeyJustPressed("SUBTRACT")) {
+      if (Sup.Input.wasKeyJustPressed("P")) {
         this.runSoundPlayer.stop();
         Game.loadPrevLevel();
       }
@@ -260,15 +261,19 @@ class PrincessBehavior extends Sup.Behavior {
 
     //varible needed for double jump validation
     if (Sup.Input.isKeyDown("SPACE")) {
-      if(!Game.cloneExists && Game.canClone) {  
+      if (!Game.cloneExists && Game.canClone) {
         this.doubleJump = true;
         Game.cloneExists = true;
         this.clone = Sup.appendScene("Prefabs/Princess/PrincessPrefab")[0];
         this.cloneBody = this.clone.arcadeBody2D;
         this.cloneBody.warpPosition(this.actor.getLocalPosition());
         
-        if (!touchBottom){
-          this.actor.arcadeBody2D.warpPosition(this.actor.getLocalPosition().add(new Sup.Math.Vector3(0,this.actor.arcadeBody2D.getSize()['height'],0)));
+        if (!touchBottom) {
+          this.actor.arcadeBody2D.warpPosition(this.actor
+                                               .getLocalPosition()
+                                               .add(new Sup.Math.Vector3(0,
+                                                                         this.actor.arcadeBody2D.getSize()['height'],
+                                                                         0)));
           velocity.y = this.jumpSpeed;
           this.actor.spriteRenderer.setAnimation("Jump");
         }
@@ -293,14 +298,14 @@ class PrincessBehavior extends Sup.Behavior {
       if (velocity.y >= 0) {
         if (this.wallJumped){
           
-        }else{
+        } else {
           this.actor.spriteRenderer.setAnimation("Jump");
         }
       } else {
-        if (touchLeft || touchRight){
+        if (touchLeft || touchRight) {
           velocity.y /= this.wallHugResistance;
           this.actor.spriteRenderer.setAnimation("WallHug");
-        }else{
+        } else {
           this.actor.spriteRenderer.setAnimation("Fall");
         }
       }
@@ -318,9 +323,9 @@ class PrincessBehavior extends Sup.Behavior {
       }
     }
     
-    if (Math.abs(velocity.x) > 0 && touchBottom){
+    if (Math.abs(velocity.x) > 0 && touchBottom) {
       this.runSoundPlayer.setVolume(1);
-    }else{
+    } else {
       this.runSoundPlayer.setVolume(0);
     }
       

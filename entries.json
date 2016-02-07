@@ -67,11 +67,6 @@
                 "id": "92",
                 "name": "Map",
                 "type": "tileMap"
-              },
-              {
-                "id": "222",
-                "name": "Map (1)",
-                "type": "tileMap"
               }
             ]
           },
